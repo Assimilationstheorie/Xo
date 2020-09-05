@@ -12,10 +12,10 @@ class Homepage extends Controller
         $pa = $this->ParseUri();
 		$id = $this->UriParam(2);
 
+		// Mysql
 		$row = Db::Query("SELECT * FROM users WHERE id = :id", [':id' => 1])->Fetch();
-		print_r($row);
 
         // Get html
-        return HomeView::Html(['id' => $id, 'pa' => $pa]);
+        return HomeView::Html(['id' => $id, 'pa' => $pa, 'row' => $row]);
     }
 }
