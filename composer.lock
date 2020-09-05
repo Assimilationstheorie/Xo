@@ -1,0 +1,95 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "079a837297ae895730c819678ae87478",
+    "packages": [
+        {
+            "name": "moovfun/xo-db",
+            "version": "v3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MoovFun/Xo-Db.git",
+                "reference": "894035102d06a67f55c375a859ed5c6c9f287829"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MoovFun/Xo-Db/zipball/894035102d06a67f55c375a859ed5c6c9f287829",
+                "reference": "894035102d06a67f55c375a859ed5c6c9f287829",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-pdo": "*",
+                "php": ">=7.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Xo\\Db\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MoovFun",
+                    "email": "moovspace@gmail.com"
+                }
+            ],
+            "description": "Php pdo mysql library.",
+            "time": "2020-09-05T14:21:12+00:00"
+        },
+        {
+            "name": "moovfun/xo-route",
+            "version": "v2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MoovFun/Xo-Route.git",
+                "reference": "3f84cc1ffcc3d4e712d0e5838f2b327c1f337fa7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MoovFun/Xo-Route/zipball/3f84cc1ffcc3d4e712d0e5838f2b327c1f337fa7",
+                "reference": "3f84cc1ffcc3d4e712d0e5838f2b327c1f337fa7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=7.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Xo\\Route\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MoovFun",
+                    "email": "moovspace@gmail.com"
+                }
+            ],
+            "description": "Php router library.",
+            "time": "2020-08-24T13:03:30+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.4"
+    },
+    "platform-dev": []
+}

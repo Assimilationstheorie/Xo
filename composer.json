@@ -1,0 +1,26 @@
+{
+	"name": "moovfun/xo",
+	"description": "Xo - Php rest api",
+	"type": "project",
+	"license": "MIT",
+	"require": {
+		"php": "^7.4",
+		"moovfun/xo-route": "^2.0",
+		"moovfun/xo-db": "^3.0"
+	},
+	"autoload": {
+        "classmap": [
+			"app/"
+		],
+        "psr-4": {
+            "App\\": "app/"
+        }
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"scripts": {
+        "post-root-package-install": [
+			"@php -r \"echo phpversion();\""
+        ]
+    }
+}
