@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "079a837297ae895730c819678ae87478",
+    "content-hash": "3e059988e39b4bb778debdb18b83cff1",
     "packages": [
         {
             "name": "moovfun/xo-db",
@@ -45,8 +45,47 @@
             "time": "2020-09-05T14:21:12+00:00"
         },
         {
+            "name": "moovfun/xo-mail",
+            "version": "v3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MoovFun/Xo-Mail.git",
+                "reference": "893794e66482aa0d0ff848ed463e30b19de6dda8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MoovFun/Xo-Mail/zipball/893794e66482aa0d0ff848ed463e30b19de6dda8",
+                "reference": "893794e66482aa0d0ff848ed463e30b19de6dda8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-xml": "*",
+                "php": ">=7.3",
+                "phpmailer/phpmailer": ">=6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Xo\\Mail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MoovFun",
+                    "email": "moovspace@gmail.com"
+                }
+            ],
+            "description": "Php email client.",
+            "time": "2020-09-05T16:35:02+00:00"
+        },
+        {
             "name": "moovfun/xo-route",
-            "version": "v2.0",
+            "version": "v3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MoovFun/Xo-Route.git",
@@ -80,6 +119,68 @@
             ],
             "description": "Php router library.",
             "time": "2020-08-24T13:03:30+00:00"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v6.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
+                "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-filter": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^1.2",
+                "friendsofphp/php-cs-fixer": "^2.2",
+                "phpunit/phpunit": "^4.8 || ^5.7"
+            },
+            "suggest": {
+                "ext-mbstring": "Needed to send email in multibyte encoding charset",
+                "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
+                "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
+                "psr/log": "For optional PSR-3 debug logging",
+                "stevenmaguire/oauth2-microsoft": "Needed for Microsoft XOAUTH2 authentication",
+                "symfony/polyfill-mbstring": "To support UTF-8 if the Mbstring PHP extension is not enabled (^1.2)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPMailer\\PHPMailer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1-only"
+            ],
+            "authors": [
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2020-07-14T18:50:27+00:00"
         }
     ],
     "packages-dev": [],

@@ -5,8 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"php": "^7.4",
-		"moovfun/xo-route": "^2.0",
-		"moovfun/xo-db": "^3.0"
+		"moovfun/xo-route": "^3.0",
+		"moovfun/xo-db": "^3.0",
+		"moovfun/xo-mail": "^3.0"
 	},
 	"autoload": {
         "classmap": [
