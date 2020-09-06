@@ -7,8 +7,15 @@
 		"php": "^7.4",
 		"moovfun/xo-route": "^3.0",
 		"moovfun/xo-db": "^3.0",
-		"moovfun/xo-mail": "^3.0"
+		"moovfun/xo-mail": "^3.0",
+		"moovfun/xo-user": "^3.0"
 	},
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/moovfun/xo-user"
+		}
+	],
 	"autoload": {
         "classmap": [
 			"app/"

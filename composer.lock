@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e059988e39b4bb778debdb18b83cff1",
+    "content-hash": "41549d1446336e26ea190af7fcefeda5",
     "packages": [
         {
             "name": "moovfun/xo-db",
@@ -119,6 +119,47 @@
             ],
             "description": "Php router library.",
             "time": "2020-08-24T13:03:30+00:00"
+        },
+        {
+            "name": "moovfun/xo-user",
+            "version": "v3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MoovFun/Xo-User.git",
+                "reference": "18148484f445358eea02309c055f2b06bd80ca14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MoovFun/Xo-User/zipball/18148484f445358eea02309c055f2b06bd80ca14",
+                "reference": "18148484f445358eea02309c055f2b06bd80ca14",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "moovfun/xo-db": "^3.0",
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Xo\\User\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MoovFun",
+                    "email": "moovspace@gmail.com"
+                }
+            ],
+            "description": "Php token authentication and authorization.",
+            "support": {
+                "source": "https://github.com/MoovFun/Xo-User/tree/v3.0",
+                "issues": "https://github.com/MoovFun/Xo-User/issues"
+            },
+            "time": "2020-09-06T14:00:19+00:00"
         },
         {
             "name": "phpmailer/phpmailer",

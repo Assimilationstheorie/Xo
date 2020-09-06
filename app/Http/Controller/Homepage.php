@@ -1,6 +1,10 @@
 <?php
 namespace App\Http\Controller;
 
+use Xo\User\Auth;
+use Xo\User\Token;
+use Xo\User\Valid;
+use Xo\User\Activation;
 use Xo\Db\Mysql\Db;
 use Xo\Mail\Send\SendEmail;
 use App\Http\View\HomeView;
@@ -11,6 +15,25 @@ class Homepage extends Controller
 	{
 		try
 		{
+			// Activation
+			// Activation::Create(1, 'code123', '127.0.0.1');
+			// $u = Activation::GetWithCode('code123');
+
+			// Token
+			// $u = Token::Update(1);
+			// $u = Token::Get($u->token);
+
+			// Auth
+			// $email = uniqid().'@woo.xx';
+			// Create user
+			// Valid::Email($email);
+			// $id = (int) Auth::Create($email,'password');
+			// Update user
+			// echo Auth::UpdateColumn('pass', 'updated', $id);
+			// Login
+			// $user = Auth::Get($email);
+			// echo $user->pass;
+
 			// Send email
 			// $ok = SendEmail::Send('to@local.host', 'Subject', '<html>Html message here</html>');
 
