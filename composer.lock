@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MoovFun/Xo-Db.git",
-                "reference": "894035102d06a67f55c375a859ed5c6c9f287829"
+                "reference": "02416efa271734929c480994d5c959e25f86ef0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MoovFun/Xo-Db/zipball/894035102d06a67f55c375a859ed5c6c9f287829",
-                "reference": "894035102d06a67f55c375a859ed5c6c9f287829",
+                "url": "https://api.github.com/repos/MoovFun/Xo-Db/zipball/02416efa271734929c480994d5c959e25f86ef0e",
+                "reference": "02416efa271734929c480994d5c959e25f86ef0e",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
                 }
             ],
             "description": "Php pdo mysql library.",
-            "time": "2020-09-05T14:21:12+00:00"
+            "time": "2020-09-06T09:05:04+00:00"
         },
         {
             "name": "moovfun/xo-mail",
