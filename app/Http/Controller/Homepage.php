@@ -12,17 +12,19 @@ class Homepage extends Controller
 		try
 		{
 			// Send email
-			// echo SendEmail::Send('to@local.host', 'Subject', '<html>Html message here</html>');
+			// $ok = SendEmail::Send('to@local.host', 'Subject', '<html>Html message here</html>');
 
-			// Mysql
+			// Mysql query
 			// $row = Db::Query("SELECT * FROM users WHERE id = :id", [':id' => 1])->Fetch();
+			// $rows = Db::Query("SELECT * FROM users WHERE id > :id", [':id' => 0])->FetchAll();
+			// $lid = Db::Query("INSERT INTO users(email,pass) VALUES(:e,:p)", [':e' => 'email@page.xx', ':p' => md5('pass')])->LastInsertId();
 
-			// From Controller
+			// Methods from controller
 			$pa = $this->ParseUri();
 			$id = $this->UriParam(2);
 
 			// Get html
-			return HomeView::Html(['id' => $id, 'pa' => $pa, 'row' => $row]);
+			return HomeView::Html(['id' => $id, 'pa' => $pa]);
 		}
 		catch(Exception $e)
 		{

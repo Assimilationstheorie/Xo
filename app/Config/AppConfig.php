@@ -3,14 +3,14 @@ namespace App\Config;
 
 class AppConfig
 {
-    // Mysql
-    const MYSQL_HOST = 'localhost';
-    const MYSQL_PORT = '3006';
-    const MYSQL_DBNAME = 'homestead';
-    const MYSQL_USER = 'root';
-    const MYSQL_PASS = 'toor';
+	// Mysql
+	const MYSQL_HOST = 'localhost';
+	const MYSQL_PORT = '3006';
+	const MYSQL_DBNAME = 'homestead';
+	const MYSQL_USER = 'root';
+	const MYSQL_PASS = 'toor';
 
-    // Smtp (default localhost without pass)
+	// Smtp (default localhost without pass)
 	const SMTP_USER = '';
 	const SMTP_PASS = '';
 	const SMTP_HOST = '127.0.0.1';

@@ -6,6 +6,7 @@ disable_symlinks off;
 client_max_body_size 100M;
 
 
+# Default server
 
 server {
 	listen 80 default_server;
@@ -37,7 +38,6 @@ server {
 }
 
 
-
 # Domain VirtualHost
 
 server {
@@ -46,6 +46,10 @@ server {
     root /var/www/html/domain.xx/public;
     index index.php;
     server_name static.domain.xx;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
 }
 
 server {
@@ -77,9 +81,9 @@ server {
     ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
     ssl_ciphers         HIGH:!aNULL:!MD5;
 
-    location /img/ {
-        root /var/www/html/domain.xx/media/images;
-    }
+    #location /img/ {
+    #    root /var/www/html/domain.xx/media/images;
+    #}
 
     location = /favicon.ico {
         rewrite . /favicon/favicon.ico;
@@ -123,10 +127,10 @@ server {
         expires           max;
     }
 
-    location /produkt/zupa-z-trupa {
+    location /produkt/nazwa {
         return 404;
     }
 
     client_max_body_size 100M;
-    # rewrite ^/kategoria-produktu/menu$ /menu permanent;
+    # rewrite ^/kategoria/menu$ /menu permanent;
 }
