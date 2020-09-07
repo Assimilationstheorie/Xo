@@ -8,6 +8,8 @@ use Xo\User\Activation;
 use Xo\Db\Mysql\Db;
 use Xo\Mail\Send\SendEmail;
 use App\Http\View\HomeView;
+// Login, register, activate
+use App\Http\Model\User\User;
 
 class Homepage extends Controller
 {

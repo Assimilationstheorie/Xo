@@ -15,7 +15,7 @@ class AppConfig
 	const SMTP_PASS = '';
 	const SMTP_HOST = '127.0.0.1';
 	const SMTP_PORT = 25; // 25, 587, 465
-	const SMTP_FROM_EMAIL = 'no-reply@local.host';
+	const SMTP_FROM_EMAIL = 'no-reply@woo.xx';
 	const SMTP_FROM_USER = 'Welcome';
 	const SMTP_TLS = false; // true - enabled ssl connection
 	const SMTP_AUTH = false; // true - enabled authentication
