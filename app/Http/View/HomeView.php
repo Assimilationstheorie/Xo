@@ -7,6 +7,6 @@ class HomeView implements View
 	{
 		// print_r($arr);
 
-		return " ! Hello from HomeView page ! " . $arr['id'];
+		return " It Works from HomeView ..." . $arr['id'];
 	}
 }
