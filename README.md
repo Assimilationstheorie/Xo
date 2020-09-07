@@ -7,12 +7,18 @@ Php mvc composer project.
 composer clearcache
 
 # create new project in dir
-composer create-project moovfun/xo ./xo
+composer create-project moovfun/xo ./api
 
 # optional
-cd xo
+cd api
 composer update
 composer dump-autoload -o
+```
+
+### Run in browser
+```
+cd api
+php -S localhost:8000 -t ./public
 ```
 
 ### Directories
