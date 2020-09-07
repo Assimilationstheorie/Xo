@@ -38,7 +38,7 @@ php -S localhost:8000 -t ./public
 server {
 	disable_symlinks off;
 	client_max_body_size 100M;
-	keepalive_timeout 60;
+	keepalive_timeout 300;
 
 	listen 80;
 	listen [::]:80;

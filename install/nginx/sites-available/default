@@ -92,7 +92,7 @@ server {
         rewrite . /favicon/favicon.ico;
     }
 
-    location ~ /(Cache|vendor|.git) {
+    location ~ /(Cache|cache|vendor|.git) {
             deny all;
             return 404;
     }
