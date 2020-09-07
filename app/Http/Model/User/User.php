@@ -37,14 +37,14 @@ class User
 	 * @param string $algo Hash algo
 	 * @return int Created User id or 0
 	 */
-	static function Register(string $email, string $pass, string $subject = 'Activation', string $algo = 'md5')
+	static function Register(string $email, string $pass, string $domain, string $subject = 'Activation', string $algo = 'md5')
 	{
 		Valid::Email($email);
 		Valid::Pass($pass);
 		$uid = (int) Auth::Create($email, $pass, self::Ip(), $algo);
 		if($uid > 0)
 		{
-			self::SendActivationEmail($uid,$email,$subject);
+			self::SendActivationEmail($uid,$email,$subject, $domain);
 		}
 		return $uid;
 	}
@@ -104,13 +104,13 @@ class User
 	 * @param string $subject Message subject
 	 * @return void
 	 */
-	protected static function SendActivationEmail(int $uid, string $email, string $subject)
+	protected static function SendActivationEmail(int $uid, string $email, string $subject, string $domain)
 	{
 		if($uid > 0)
 		{
 			$code = uniqid();
 			Activation::Create($uid, $code, self::Ip());
-			SendEmail::Send($email, strip_tags($subject), EmailTheme::Get('media/email/activation.html', ['{CODE}' => $code]));
+			SendEmail::Send($email, strip_tags($subject), EmailTheme::Get('media/email/activation.html', ['{DOMAIN}' => rtrim($domain, '/'), '{CODE}' => $code]));
 		}
 	}
 
@@ -146,7 +146,7 @@ if($u->id > 0)
 	echo "Logged!!! Token: " . Token::Update($u->id)->token . " ";
 }
 
-$user = User::Register(uniqid().'@woo.xx', 'password');
+$user = User::Register(uniqid().'@woo.xx', 'password', 'domain.xx');
 print_r($user);
 
 echo User::ActivateAccount('5f567c61bd41d');
