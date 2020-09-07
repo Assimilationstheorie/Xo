@@ -55,10 +55,11 @@ class User
 	 * @param string $email Email address
 	 * @param string $subject Message subject
 	 * @param string $algo Hash algo
-	 * @return int True or false
+	 * @return int If updated 1 else 0
 	 */
 	static function Reset(string $email, string $subject = 'New password', string $algo = 'md5')
 	{
+		$ok = 0;
 		Valid::Email($email);
 		$user = Auth::Get($email);
 		if($user->id > 0)
