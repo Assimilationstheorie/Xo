@@ -1,6 +1,6 @@
 {
 	"name": "moovfun/xo",
-	"description": "Xo - Php rest api",
+	"description": "Php mvc composer project (rest api).",
 	"type": "project",
 	"license": "MIT",
 	"require": {
