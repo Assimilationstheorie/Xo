@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\View;
 
-use App\Menu\MenuBox;
+use App\Http\View\LeftMenu;
 
 class HomeView implements View
 {
@@ -11,20 +11,7 @@ class HomeView implements View
 
 		$h = " It Works ... " . $arr['id'];
 
-		// $h .= self::LeftMenu();
-
-		return $h;
-	}
-
-	static function LeftMenu()
-	{
-		$m = new MenuBox('Homepage', '/', '<i class="fas fa-user"></i>');
-		$m->AddLink('Login', '/login');
-		$m->AddLink('Register', '/register');
-		$h = $m->Show();
-
-		// Better insert style from css
-		$h .= $m->Style();
+		// $h .= LeftMenu::Html();
 
 		return $h;
 	}
