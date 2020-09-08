@@ -40,6 +40,7 @@ class User
 	 *
 	 * @param string $email Email address
 	 * @param string $pass Password
+	 * @param string $domain Your domain hostname
 	 * @param string $subject Message subject
 	 * @param string $algo Hash algo
 	 * @return int Created User id or 0
@@ -60,13 +61,13 @@ class User
 	 * Reset - Change user password
 	 *
 	 * @param string $email Email address
+	 * @param string $domain Your domain hostname
 	 * @param string $subject Message subject
 	 * @param string $algo Hash algo
 	 * @return int If updated 1 else 0
 	 */
-	static function Reset(string $email, string $subject = 'New password', string $algo = 'md5')
+	static function Reset(string $email, string $domain, string $subject = 'New password', string $algo = 'md5')
 	{
-		$ok = 0;
 		Valid::Email($email);
 		$user = Auth::Get($email);
 		if($user->id > 0)
@@ -75,10 +76,11 @@ class User
 			$ok = Auth::UpdateColumn('pass', Auth::PassHash($pass, $algo), $user->id);
 			if($ok > 0)
 			{
-				self::SendResetEmail($email, $pass, $subject);
+				self::SendResetEmail($email, $pass, $subject, $domain);
 			}
+			return $ok;
 		}
-		return $ok;
+		return 0;
 	}
 
 	/**
@@ -130,9 +132,9 @@ class User
 	 * @param string $subject Message subject
 	 * @return void
 	 */
-	protected static function SendResetEmail(string $email, string $pass, string $subject)
+	protected static function SendResetEmail(string $email, string $pass, string $subject, string $domain)
 	{
-		SendEmail::Send($email, strip_tags($subject), EmailTheme::Get('media/email/resetpass.html', ['{PASS}' => $pass]));
+		SendEmail::Send($email, strip_tags($subject), EmailTheme::Get('media/email/resetpass.html', ['{DOMAIN}' => rtrim($domain, '/'), '{PASS}' => $pass]));
 	}
 
 	/**
