@@ -134,3 +134,8 @@ server {
 	# return 301 https://domain.xx$request_uri;
 }
 ```
+
+### Curl
+```sh
+curl -X GET http://domain.xx -H "Authorization: Bearer 61e51229-f13c-11ea-9db7-7e44772edd6d"
+```
