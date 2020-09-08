@@ -11,6 +11,6 @@ try
 }
 catch(Exception $e)
 {
-    echo json_encode(["errorMsg" => $e->getMessage(), "errorCode" => $e->getCode()]);
+    echo json_encode((object) ['error' => ['message' => $e->getMessage(), 'code' => $e->getCode()]]);
 }
 ?>

@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controller;
 
+use Exception;
 use Xo\Db\Mysql\Db;
 use Xo\User\Auth;
 use Xo\User\Token;
