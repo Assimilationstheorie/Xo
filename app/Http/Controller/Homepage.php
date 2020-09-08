@@ -1,14 +1,15 @@
 <?php
 namespace App\Http\Controller;
 
+use Xo\Db\Mysql\Db;
 use Xo\User\Auth;
 use Xo\User\Token;
 use Xo\User\Valid;
 use Xo\User\Activation;
-use Xo\Db\Mysql\Db;
 use Xo\Mail\Send\SendEmail;
+use Xo\Mail\Send\EmailTheme;
+
 use App\Http\View\HomeView;
-// Login, register, activate
 use App\Http\Model\User\User;
 
 class Homepage extends Controller
@@ -17,6 +18,10 @@ class Homepage extends Controller
 	{
 		try
 		{
+			// echo Token::BearerToken();
+			// $user = Auth::IsAuthorized();
+			// print_r($user);
+
 			// Activation
 			// Activation::Create(1, 'code123', '127.0.0.1');
 			// $u = Activation::GetWithCode('code123');

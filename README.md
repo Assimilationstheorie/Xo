@@ -78,8 +78,10 @@ server {
 namespace App\Http\Controller;
 
 use Xo\Db\Mysql\Db;
+use Xo\User\Auth;
+use Xo\User\Valid;
 use Xo\Mail\Send\SendEmail;
-use App\Http\View\HomeView;
+use Xo\Mail\Send\EmailTheme;
 
 class Homepage extends Controller
 {
@@ -87,13 +89,20 @@ class Homepage extends Controller
 	{
 		try
 		{
+			// Bearer token authorization
+			$user = Auth::IsAuthorized();
+
+			// Validate
+			Valid::Email('email@local.host');
+
 			// Send email
-			$ok = SendEmail::Send('to@local.host', 'Subject', '<html>Html message here</html>');
+			$ok = SendEmail::Send('email@local.host', 'Subject', '<html>Html message here</html>');
+			$ok = SendEmail::Send('email@local.host', 'Subject', EmailTheme::Get('media/email/resetpass.html', ['{PASS}' => 'password']));
 
 			// Mysql query
 			$row = Db::Query("SELECT * FROM users WHERE id = :id", [':id' => 1])->Fetch();
 			$rows = Db::Query("SELECT * FROM users WHERE id > :id", [':id' => 0])->FetchAll();
-			$lid = Db::Query("INSERT INTO users(email,pass) VALUES(:e,:p)", [':e' => 'email@page.xx', ':p' => md5('pass')])->LastInsertId();
+			$lid = Db::Query("INSERT INTO users(email,pass) VALUES(:e,:p)", [':e' => 'email@page.xx', ':p' => md5('password')])->LastInsertId();
 
 			// Methods from controller
 			$pa = $this->ParseUri();
