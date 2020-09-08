@@ -33,45 +33,6 @@ php -S localhost:8000 -t ./public
 /public
 ```
 
-### Nginx server
-```sh
-server {
-	disable_symlinks off;
-	client_max_body_size 100M;
-	keepalive_timeout 300;
-
-	listen 80;
-	listen [::]:80;
-	root /var/www/html/domain.xx/public;
-	server_name domain.xx www.domain.xx;
-	index index.php;
-
-	location = /favicon.ico {
-		rewrite . /favicon/favicon.ico;
-	}
-
-	location ~ /(Cache|cache|vendor|.git) {
-		deny all;
-		return 404;
-	}
-
-	location / {
-		# Get file or folder or redirect uri to url param in index.php
-		try_files $uri $uri/ /index.php?url=$uri&$args;
-	}
-
-	location ~ \.php$ {
-		# Php-fpm
-		include snippets/fastcgi-php.conf;
-		fastcgi_pass unix:/run/php/php7.4-fpm.sock;
-	}
-
-	# Tls redirect
-	# return 301 https://$host$request_uri;
-	# return 301 https://domain.xx$request_uri;
-}
-```
-
 ## Controller class
 ```php
 <?php
@@ -132,5 +93,44 @@ class HomeView implements View
 
 		return " ! Hello from HomeView page ! " . $arr['id'];
 	}
+}
+```
+
+### Nginx server
+```sh
+server {
+	disable_symlinks off;
+	client_max_body_size 100M;
+	keepalive_timeout 300;
+
+	listen 80;
+	listen [::]:80;
+	root /var/www/html/domain.xx/public;
+	server_name domain.xx www.domain.xx;
+	index index.php;
+
+	location = /favicon.ico {
+		rewrite . /favicon/favicon.ico;
+	}
+
+	location ~ /(Cache|cache|vendor|.git) {
+		deny all;
+		return 404;
+	}
+
+	location / {
+		# Get file or folder or redirect uri to url param in index.php
+		try_files $uri $uri/ /index.php?url=$uri&$args;
+	}
+
+	location ~ \.php$ {
+		# Php-fpm
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+	}
+
+	# Tls redirect
+	# return 301 https://$host$request_uri;
+	# return 301 https://domain.xx$request_uri;
 }
 ```
