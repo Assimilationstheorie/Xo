@@ -17,12 +17,19 @@ class User
 	 * @param string $algo Hash algorithm
 	 * @return object User object or 0
 	 */
-	static function Login(string $email, string $pass, string $algo = 'md5')
+	static function Login(string $email, string $pass, $on_token = 1, string $algo = 'md5')
 	{
 		Valid::Email($email);
+
 		$user = Auth::Get($email);
 		if($user->pass == Auth::PassHash($pass, $algo) && $user->active == 1 && $user->baned == 0 && $user->closed == 0)
 		{
+			if($on_token)
+			{
+				// Create or update token, expiration time 1 hour.
+				$t = Token::Update($user->id);
+				$user->token = $t->token;
+			}
 			return $user;
 		}
 		return 0;
