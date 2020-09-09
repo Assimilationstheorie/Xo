@@ -11,6 +11,7 @@ class HomeView implements View
 
 		$h = " It Works ... " . $arr['id'];
 
+		// Add left menu
 		// $h .= LeftMenu::Html();
 
 		return $h;

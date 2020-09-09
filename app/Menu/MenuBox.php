@@ -43,7 +43,12 @@ class MenuBox
         $this->All[] = '<a href="'.$url.'" class="mlink '.$c.'"> <span>'.$icon.'</span> '.$name.' <span class="show-chevron"><i class="fas fa-chevron-right"></i></span> </a>';
     }
 
-    function Show()
+	/**
+	 * Html - Get menu html
+	 *
+	 * @return string Menu html content
+	 */
+    function Html()
     {
         $sub = '';
         $open = '';
@@ -81,7 +86,7 @@ class MenuBox
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
 
-    function Style()
+    static function Style()
     {
 		return '
 		<link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
@@ -176,6 +181,8 @@ class MenuBox
 $m = new MenuBox('Panel', '/login', '<i class="fas fa-user"></i>');
 $m->AddLink('Login', '/login');
 $m->AddLink('Register', '/register');
-echo $m->Show();
-echo $m->Style();
+// Get menu html
+echo $m->Html();
+// Get menu style
+echo MenuBox::Style();
 */

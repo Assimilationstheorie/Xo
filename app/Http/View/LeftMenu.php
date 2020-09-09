@@ -11,6 +11,9 @@ class LeftMenu
 		// $html .= self::SubMenu2();
 		// $html .= self::SubMenu3();
 
+		// Better insert style from css
+		$html .= MenuBox::Style();
+
 		return $html;
 	}
 
@@ -19,11 +22,6 @@ class LeftMenu
 		$m = new MenuBox('Homepage', '/', '<i class="fas fa-home"></i>');
 		$m->AddLink('Login', '/login');
 		$m->AddLink('Register', '/register');
-		$h = $m->Show();
-
-		// Better insert style from css
-		$h .= $m->Style();
-
-		return $h;
+		return $m->Html();
 	}
 }
