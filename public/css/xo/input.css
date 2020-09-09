@@ -1,0 +1,96 @@
+::placeholder {
+	color: #636f80c7;
+}
+
+label {
+	float: left;
+	width: 100%;
+	color: #333;
+	font-size: 14px;
+	padding: 10px 0px;
+	letter-spacing: 0.6px
+}
+
+input {
+	float: left;
+	width: 100%;
+	height: 46px;
+	color: #222;
+	font-size: 15px;
+	padding: 13px 15px;
+	margin-bottom: 10px;
+	background: #e0e3e72a;
+	border: 1px solid #e0e3e7;
+	transition: border,background,box-shadow .5s;
+}
+
+select {
+	float: left;
+	width: 100%;
+	height: 46px;
+	color: #222;
+	font-size: 15px;
+	padding: 13px 15px;
+	margin-bottom: 10px;
+	background: #e0e3e72a;
+	border: 1px solid #e0e3e7;
+	transition: border,background,box-shadow .5s;
+}
+
+textarea {
+	float: left;
+	color: #222;
+	font-size: 15px;
+	padding: 13px 15px;
+	margin-bottom: 10px;
+	background: #e0e3e72a;
+	border: 1px solid #e0e3e7;
+	min-height: 150px;
+	min-width: 100%;
+	max-width: 100%;
+	transition: border,background,box-shadow .5s;
+}
+
+button, input[type=submit] {
+	float: right;
+	width: auto;
+	height: 46px;
+	font-size: 15px;
+	min-width: 125px;
+	padding: 13px 15px;
+	margin-bottom: 10px;
+	color: #f07c2f;
+	background: #fff;
+	border: 1px solid #f07c2f;
+	transition: al .6s;
+	cursor: pointer;
+	transition: background .7s;
+}
+button:hover, input[type=submit]:hover {
+	color: #fff;
+	background: #f07c2f;
+	border: 1px solid #f07c2f;
+}
+
+input[type=checkbox], input[type=radio] {
+	float: left;
+	width: auto;
+	height: auto;
+}
+
+select {
+	-o-appearance: none;
+	-ms-appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input:focus, textarea:focus, select:focus {
+	border: 1px solid #f07c2f;
+	box-shadow: 0px 0px 0px 3px #f07c2f22;
+}
+
+input:hover, textarea:hover, select:hover {
+	border: 1px solid #f07c2f;
+}
