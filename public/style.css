@@ -16,6 +16,8 @@ h3{
 	float: left; width: 100%;
 }
 
-body {
+html, body {
+	margin: 0px;
+	padding: 0px;
 	min-height: 100vh
 }

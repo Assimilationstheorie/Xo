@@ -28,6 +28,8 @@ class HomeView implements View
 			<h2>Awesome</h2>
 			<label>Email addres</label>
 			<input type="text" placeholder="Enter email address">
+			<label>Password</label>
+			<input type="password" placeholder="Enter password">
 			<label>Gender</label>
 			<select>
 				<option>MALE</option>
