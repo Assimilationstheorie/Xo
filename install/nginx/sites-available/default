@@ -22,31 +22,31 @@ server {
 }
 
 server {
-    listen 443 default_server ssl http2;
-    listen [::]:443 default_server ssl http2;
-    root /var/www/html/default;
-    index index.html index.php;
-    server_name _;
+	listen 443 default_server ssl http2;
+	listen [::]:443 default_server ssl http2;
+	root /var/www/html/default;
+	index index.html index.php;
+	server_name _;
 
-    ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-    ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
-    ssl_ciphers         HIGH:!aNULL:!MD5;
+	ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+	ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+	ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+	ssl_ciphers         HIGH:!aNULL:!MD5;
 
-    location / {
-        try_files $uri $uri/ =404;
-    }
+	location / {
+		try_files $uri $uri/ =404;
+	}
 }
 
 
 # Domain VirtualHost
 
 server {
-    listen 80;
-    listen [::]:80;
-    root /var/www/html/domain.xx/public;
-    index index.php;
-    server_name static.domain.xx;
+	listen 80;
+	listen [::]:80;
+	root /var/www/html/domain.xx/public;
+	index index.php;
+	server_name static.domain.xx;
 
 	location / {
 		try_files $uri $uri/ =404;
@@ -54,87 +54,97 @@ server {
 }
 
 server {
-    listen 80;
-    listen [::]:80;
+	listen 80;
+	listen [::]:80;
 
-    root /var/www/html/domain.xx/public;
-    index index.php;
-    server_name domain.xx www.domain.xx;
+	root /var/www/html/domain.xx/public;
+	server_name domain.xx www.domain.xx;
+	index index.php;
 
-    location = /favicon.ico {
-        rewrite . /favicon/favicon.ico;
-    }
+	location = /favicon.ico {
+		rewrite . /favicon/favicon.ico;
+	}
 
 	# redirect www to non www and http to https
-    # return 301 https://$host$request_uri;
+	# return 301 https://$host$request_uri;
 
 	# Unhash this for https
-    # return 301 https://domain.xx$request_uri;
+	# return 301 https://domain.xx$request_uri;
 }
 
 server {
-    listen              443 ssl http2;
-    keepalive_timeout   60;
+	listen              443 ssl http2;
+	listen              [::]:443 ssl http2;
 
-    root /var/www/html/domain.xx/public;
-    index index.php;
-    server_name domain.xx www.domain.xx;
+	keepalive_timeout   60;
+	client_max_body_size 100M;
 
-    ssl_certificate     /etc/letsencrypt/live/domain.xx/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/domain.xx/privkey.pem;
-    ssl_protocols       TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
-    ssl_ciphers         HIGH:!aNULL:!MD5;
+	root /var/www/html/domain.xx/public;
+	server_name domain.xx www.domain.xx;
+	index index.php;
 
-    location = /favicon.ico {
-        rewrite . /favicon/favicon.ico;
-    }
+	ssl_certificate     /etc/letsencrypt/live/domain.xx/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/domain.xx/privkey.pem;
+	ssl_protocols       TLSv1.2 TLSv1.3; # TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+	ssl_ciphers         HIGH:!aNULL:!MD5;
 
-    location ~ /(Cache|cache|vendor|.git) {
-            deny all;
-            return 404;
-    }
+	location = /favicon.ico {
+		rewrite . /favicon/favicon.ico;
+	}
 
-    location / {
+	location ~ /(Cache|cache|sql|vendor|.git) {
+			deny all;
+			return 404;
+	}
+
+	location / {
 		proxy_cache my_cache;
 
-        # Get file or folder or error
-        # try_files $uri $uri/ =404;
+		# Get file or folder or error
+		# try_files $uri $uri/ =404;
 
-        # Get file or folder or redirect uri to url param in index.php
-        try_files $uri $uri/ /index.php$is_args$args;
-    }
+		# Get file or folder or redirect uri to url param in index.php
+		try_files $uri $uri/ /index.php$is_args$args;
+	}
 
-    location ~ \.php$ {
-        # Php-fpm
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+	location ~ \.php$ {
+		try_files $uri =404;
 
-        # Php-fpm sockets
-        # fastcgi_param HTTP_PROXY "";
-        # fastcgi_pass 127.0.0.1:9000;
-        # fastcgi_index index.php;
-        # include fastcgi_params;
-    }
+		# Php-fpm
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.4-fpm.sock;
 
-    location ~* \.(html|xml|txt|js|css|png|jpg|jpeg|gif|ico|svg|flv|pdf|mp3|mp4|mov)$ {
+		# Php-fpm sockets
+		# fastcgi_param HTTP_PROXY "";
+		# fastcgi_pass 127.0.0.1:9000;
+		# fastcgi_index index.php;
+		# include fastcgi_params;
+		# fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+	}
+
+	location /media {
+		location ~ \.php$ {return 403;}
+	}
+
+	location ~* \.(html|xml|txt|js|css|png|jpg|jpeg|gif|ico|svg|flv|pdf|mp3|mp4|mov)$ {
 		expires 1M;
 		access_log off;
 		add_header Set-Cookie "";
 		add_header Cache-Control "public";
 
-        # add_header Cache-Control "public, no-transform";
+		# add_header Cache-Control "public, no-transform";
 		# add_header Cache-Control "max-age=31536000";
 		# add_header X-UA-Compatible "IE=Edge,chrome=1";
 		# add_header X-Cache-Status $upstream_cache_status;
 		# fastcgi_hide_header Set-Cookie;
-    }
+	}
 
-    location /produkt/nazwa {
-        return 404;
-    }
+	location /produkt/nazwa {
+		return 404;
+	}
 
-    client_max_body_size 100M;
-    # rewrite ^/kategoria/menu$ /menu permanent;
+	client_max_body_size 100M;
+	# rewrite ^/kategoria/menu$ /menu permanent;
 }
 
 
