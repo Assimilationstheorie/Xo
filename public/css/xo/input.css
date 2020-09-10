@@ -1,3 +1,8 @@
+.scrollbar {
+	scrollbar-width: thin;
+	scrollbar-color: #f07c2f #fff;
+}
+
 ::placeholder {
 	color: #636f80c7;
 }
@@ -93,4 +98,9 @@ input:focus, textarea:focus, select:focus {
 
 input:hover, textarea:hover, select:hover {
 	border: 1px solid #f07c2f;
+}
+
+/* rounded corners */
+input, select, textarea, button {
+	border-radius: 0px;
 }

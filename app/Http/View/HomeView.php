@@ -7,9 +7,7 @@ class HomeView implements View
 {
 	static function Html(array $arr): string
 	{
-		// print_r($arr);
-
-		$h = "<h3> It Works ... </h3>";
+		$h = "<h1> It Works ... </h1>";
 
 		// Sample form
 		$h .= self::ShowForm();
@@ -23,7 +21,9 @@ class HomeView implements View
 	static function ShowForm()
 	{
 		return '
-		<link href="/style.css" rel="stylesheet"> <script defer src="/main.js"></script>
+		<link href="/style.css" rel="stylesheet">
+		<script defer src="/main.js"></script>
+
 		<form method="post">
 			<h2>Awesome</h2>
 			<label>Email addres</label>
