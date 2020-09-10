@@ -7,10 +7,13 @@ class HomeView implements View
 {
 	static function Html(array $arr): string
 	{
-		$h = "<h1> It Works ... </h1>";
+		$h = '<h1> It Works ... </h1>';
 
 		// Sample form
 		$h .= self::ShowForm();
+
+		// Animations
+		$h .= self::Animate();
 
 		// Add menu
 		// $h .= LeftMenu::Html();
@@ -42,5 +45,27 @@ class HomeView implements View
 			<input type="radio" id="dewey" name="drone" value="dewey">
 			<input type="submit" value="Button">
 		</form>';
+	}
+
+	static function Animate()
+	{
+		return '
+		<h1>Animations</h1>
+		<div class="center">
+			<div class="blob orange">+</div>
+		</div>
+		<div class="center">
+			<div class="blob-rotate">+</div>
+		</div>
+		<div class="center">
+			<div class="blob-scale">+</div>
+		</div>
+		<div class="center">
+			<a class="a-usderscore">Underscore link</a>
+		</div>
+		<div class="center">
+			<a class="a-usderscore usderscore-left">Underscore link</a>
+		</div>
+		';
 	}
 }

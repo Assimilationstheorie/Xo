@@ -1,0 +1,113 @@
+/* Pulse shadow */
+.blob {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	height: 30px;
+	width: 30px;
+	margin: 0px;
+	text-align: center;
+	background: #eee;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 #eee;
+	cursor: pointer;
+	animation: pulse-black 2s infinite;
+}
+.blob.orange {
+	background: rgba(255, 121, 63, 1);
+	box-shadow: 0 0 0 0 rgba(255, 121, 63, 1);
+	animation: pulse-anim 2s infinite;
+}
+@keyframes pulse-anim {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 20px rgba(255, 121, 63, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+	}
+}
+
+/* Scale animation */
+.blob-scale {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	background: #eee;
+	cursor: pointer;
+	transition: transform 0.70s;
+	animation: scale-anim 2s alternate infinite ease-in;
+}
+@keyframes scale-anim {
+	0%   {transform: scale(.8);}
+	100% {transform: scale(1.5);}
+}
+
+/* Rotate animation */
+.blob-rotate {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	background: #eee;
+	transition: transform 0.70s;
+	cursor: pointer;
+}
+.blob-rotate:hover {
+	transition: 0.70s;
+	transform: rotate(360deg);
+	background: #eee;
+}
+
+/* Undeline center link hover */
+.a-usderscore {
+	color: #222;
+	padding: 5px 10px;
+	position: relative;
+	cursor: pointer;
+}
+.a-usderscore:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background: rgba(255, 121, 63, 0.7);
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+.a-usderscore:hover:after {
+	width: 100%;
+	left: 0;
+}
+
+/* Undeline left link hover */
+.usderscore-left:after {
+	left: 0% !important;
+}
+
+/*
+Samples
+<div class="blob orange">+</div>
+<div class="blob-rotate">+</div>
+<div class="blob-scale">+</div>
+<a class="a-usderscore">Super center underscore link</a>
+<a class="a-usderscore usderscore-left">Super left underscore link</a>
+*/

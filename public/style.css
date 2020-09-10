@@ -1,4 +1,5 @@
 @import url('/css/xo/input.css');
+@import url('/css/xo/animate.css');
 
 *{
 	box-sizing: border-box;
@@ -28,4 +29,10 @@ html, body {
 	margin: 0px;
 	padding: 0px;
 	min-height: 100vh
+}
+
+.center{
+	float: left;
+	width: 100%;
+	padding: 20px;
 }
