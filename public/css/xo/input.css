@@ -7,6 +7,37 @@
 	color: #636f80c7;
 }
 
+.notice {
+	float: left; width: 100%;
+	padding: 10px;
+	margin: 10px 0px;
+	background: #eee;
+	color: #636f80c7;
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 0px;	;
+}
+.notice i {
+	margin: 5px;
+}
+.notice-green {
+	background: #00b83723;
+	color: #00b837;
+}
+.notice-red {
+	background: #ff223423;
+	color: #ff2233;
+}
+.notice-orange {
+	background: #ff660023;
+	color: #ff6600;
+}
+.notice-yellow {
+	background: #ffe60023;
+	color: #e7d000;
+}
+
+
 label {
 	float: left;
 	width: 100%;
