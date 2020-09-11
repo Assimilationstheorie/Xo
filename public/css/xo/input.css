@@ -10,8 +10,9 @@
 label {
 	float: left;
 	width: 100%;
-	color: #333;
-	font-size: 14px;
+	color: #636f80c7;
+	font-size: 13px;
+	font-weight: 700;
 	padding: 10px 0px;
 	letter-spacing: 0.6px
 }
