@@ -66,6 +66,10 @@ class HomeView implements View
 		<div class="center">
 			<a class="a-usderscore usderscore-left">Underscore link</a>
 		</div>
+
+		<div class="center">
+			<div class="radar"></div>
+		</div>
 		';
 	}
 }

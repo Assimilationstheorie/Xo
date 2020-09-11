@@ -1,3 +1,8 @@
+/* Div background fixed */
+.background-fixed {
+	background-attachment: fixed;
+}
+
 /* Pulse shadow */
 .blob {
 	display: flex;
@@ -55,6 +60,44 @@
 	100% {transform: scale(1.5);}
 }
 
+.radar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	height: 50px;
+	width: 50px;
+	margin: 0px;
+    position: relative;
+}
+.radar::before, .radar::after {
+    content: "";
+    position: absolute;
+    border: 6px solid #87c140;
+    opacity: 1;
+    border-radius: 50%;
+	animation: radar-anim 1s cubic-bezier(0,.2,.8,1) infinite;
+}
+.radar:before {
+	animation-delay:-.5s
+}
+@keyframes radar-anim {
+	0% {
+		top:20px;
+		left:20px;
+		width:0;
+		height:0;
+		opacity:1
+	}
+	to {
+		top:-1px;
+		left:-1px;
+		width:40px;
+		height:40px;
+		opacity:0
+	}
+}
+
 /* Rotate animation */
 .blob-rotate {
 	display: flex;
@@ -77,11 +120,13 @@
 /* Undeline center link hover */
 .a-usderscore {
 	color: #222;
-	padding: 5px 10px;
+	padding: 15px 20px;
 	position: relative;
 	cursor: pointer;
+	overflow: hidden;
+	border: 0px solid rgba(255, 121, 63, 0.7);
 }
-.a-usderscore:after {
+.a-usderscore::before {
 	background: none repeat scroll 0 0 transparent;
 	bottom: 0;
 	content: "";
@@ -92,14 +137,15 @@
 	background: rgba(255, 121, 63, 0.7);
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
+	z-index: -1;
 }
-.a-usderscore:hover:after {
+.a-usderscore:hover::before {
 	width: 100%;
 	left: 0;
 }
 
 /* Undeline left link hover */
-.usderscore-left:after {
+.usderscore-left::before {
 	left: 0% !important;
 }
 
