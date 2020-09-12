@@ -9,7 +9,7 @@ class HomeView implements View
 	static function Html(array $arr): string
 	{
 		// Header
-		$h = Html::Header('Home page', 'It is the homepage!', 'home page', '');
+		$h = Html::Header('Page title', 'Page description', 'home,page', '');
 
 		// Html
 		$h .= '<h1> It Works ... </h1>';
