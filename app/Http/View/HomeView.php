@@ -30,18 +30,25 @@ class HomeView implements View
 
 		<form method="post">
 			<h2>Awesome</h2>
-			<div class="notice notice-red"> <i class="fas fa-exclamation"></i> Enter correct email address!  </div>
+
+			<div class="notice notice-green"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+
 			<label>Email addres</label>
 			<input type="text" placeholder="Enter email address">
+			<div class="error-input">Invalid email address.</div>
+
 			<label>Password</label>
 			<input type="password" placeholder="Enter password">
+
 			<label>Gender</label>
 			<select>
 				<option>MALE</option>
 				<option>FEMALE</option>
 			</select>
+
 			<label>Message</label>
 			<textarea placeholder="Enter message"></textarea>
+
 			<input type="checkbox" name="scales" checked>
 			<input type="radio" name="drone" value="huey" checked>
 			<input type="radio" id="dewey" name="drone" value="dewey">
