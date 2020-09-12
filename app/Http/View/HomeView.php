@@ -2,12 +2,17 @@
 namespace App\Http\View;
 
 use App\Http\View\LeftMenu;
+use App\Http\Component\Html;
 
 class HomeView implements View
 {
 	static function Html(array $arr): string
 	{
-		$h = '<h1> It Works ... </h1>';
+		// Header
+		$h = Html::Header('Home page', 'It is the homepage!', 'home page', '');
+
+		// Html
+		$h .= '<h1> It Works ... </h1>';
 
 		// Sample form
 		$h .= self::ShowForm();
@@ -17,6 +22,8 @@ class HomeView implements View
 
 		// Add menu
 		// $h .= LeftMenu::Html();
+
+		$h .= Html::Footer();
 
 		return $h;
 	}

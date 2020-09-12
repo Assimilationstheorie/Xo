@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Html;
+namespace App\Http\Component;
 
 class Html
 {
