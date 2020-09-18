@@ -6,6 +6,7 @@ use Xo\User\Valid;
 use Xo\User\Activation;
 use Xo\Mail\Send\SendEmail;
 use Xo\Mail\Send\EmailTheme;
+use App\Http\Model\User\UserInfo;
 
 class User
 {
@@ -52,6 +53,7 @@ class User
 		$uid = (int) Auth::Create($email, $pass, self::Ip(), $algo);
 		if($uid > 0)
 		{
+			UserInfo::Create($uid); // user info with random alias
 			self::SendActivationEmail($uid,$email,$subject, $domain);
 		}
 		return $uid;

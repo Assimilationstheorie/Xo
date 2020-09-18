@@ -136,6 +136,62 @@ server {
 ```
 
 ### Curl
-```sh
+```
+# GET
 curl -X GET http://domain.xx -H "Authorization: Bearer 61e51229-f13c-11ea-9db7-7e44772edd6d"
+# POST, PUT
+curl -X POST http://domain.xx -H "Authorization: Bearer 61e51229-f13c-11ea-9db7-7e44772edd6d"
+# Login
+curl -X POST -d "email=5f567a7968930@woo.xx&pass=password" http://domain.xx/api/auth
+# Form data
+-d "id=123&name=Jimbo" -H "Content-Type: application/x-www-form-urlencoded"
+# Json data
+-d '{"key1":"value1", "key2":"value2"}' -H "Content-Type: application/json"
+```
+
+## REST API
+
+### Login
+```
+Url: /api/auth
+POST: {email}, {pass}
+Return: token
+
+curl -X POST -d "email=5f567a7968930@woo.xx&pass=password" http://domain.xx/api/auth
+```
+
+### Logged user info
+```
+Url: /api/user/info
+POST: "Authorization: Bearer {token}"
+Return: user object
+
+curl -X POST -H "Authorization: Bearer c7451263-f99a-11ea-a3e7-f2c7e188c9d9" http://xo.xx/api/user/info
+```
+
+### Get user profil with id
+```
+Url: /api/user/info/id
+POST: {id}
+Return: user info
+
+curl -X POST http://xo.xx/api/user/info/id -d "id=88"
+```
+
+### Get user profil with alias
+```
+Url: /api/user/info/alias
+POST: {alias}
+Return: user info
+
+curl -X POST http://xo.xx/api/user/info/alias -d "alias=username"
+```
+
+### Get user profil with public email
+```
+Url: /api/user/info/email
+POST: {email}
+Return: user info
+
+curl -X POST http://xo.xx/api/user/info/email -d "email=user@domain.xx"
 ```
