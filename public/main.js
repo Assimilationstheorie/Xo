@@ -8,7 +8,8 @@ window.onload = () =>
 		userId: 1
 	});
 
-	let data = new FormData();
+	// let data = new FormData(document.forms[0])
+	let data = new FormData(); // Or FormData(document.forms[0])
     data.append("title","foo");
 	data.append("body","bar");
 	data.append("userId",1);
@@ -23,7 +24,7 @@ window.onload = () =>
 	// 	console.log("Response: ", p);
 	// });
 
-	// POST
+	// // POST
 	// new Request()
 	// .Post()
 	// .BearerToken('token-123')
