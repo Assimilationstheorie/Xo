@@ -32,7 +32,6 @@ class HomeView implements View
 	{
 		return '
 		<link href="/style.css" rel="stylesheet">
-		<script defer src="/main.js"></script>
 		<link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
 
 		<form method="post">

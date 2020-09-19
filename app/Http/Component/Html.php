@@ -40,9 +40,8 @@ return '<!DOCTYPE html>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" rel="stylesheet">
 	<link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
 
-    <link href="/style.css" rel="stylesheet">
-	<script defer src="/main.js"></script>
-
+	<link href="/style.css" rel="stylesheet">
+	<script defer src="/main.js" type="module"></script>
 	'.$metatags.'
 </head>
 <body>
