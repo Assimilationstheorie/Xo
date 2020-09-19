@@ -145,8 +145,30 @@
 }
 
 /* Undeline left link hover */
-.usderscore-left::before {
-	left: 0% !important;
+.a-usderscore-left {
+	color: #222;
+	padding: 15px 20px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	border: 0px solid rgba(255, 121, 63, 0.7);
+}
+.a-usderscore-left::before {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 0%;
+	position: absolute;
+	background: rgba(255, 121, 63, 0.7);
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+	z-index: -1;
+}
+.a-usderscore-left:hover::before {
+	width: 100%;
+	left: 0;
 }
 
 /*

@@ -82,7 +82,7 @@ class HomeView implements View
 			<a class="a-usderscore">Underscore link</a>
 		</div>
 		<div class="center">
-			<a class="a-usderscore usderscore-left">Underscore link</a>
+			<a class="a-usderscore-left">Underscore link</a>
 		</div>
 		';
 	}
