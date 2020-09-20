@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MoovFun/Xo-Db.git",
-                "reference": "02416efa271734929c480994d5c959e25f86ef0e"
+                "reference": "1b0f408a63aad0d5d4db8675a28f89f35cb6c960"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MoovFun/Xo-Db/zipball/02416efa271734929c480994d5c959e25f86ef0e",
-                "reference": "02416efa271734929c480994d5c959e25f86ef0e",
+                "url": "https://api.github.com/repos/MoovFun/Xo-Db/zipball/1b0f408a63aad0d5d4db8675a28f89f35cb6c960",
+                "reference": "1b0f408a63aad0d5d4db8675a28f89f35cb6c960",
                 "shasum": ""
             },
             "require": {
@@ -50,12 +50,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MoovFun/Xo-Mail.git",
-                "reference": "893794e66482aa0d0ff848ed463e30b19de6dda8"
+                "reference": "0cdb882cd6f88fb6954a9bdd6f5921a696f6e0d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MoovFun/Xo-Mail/zipball/893794e66482aa0d0ff848ed463e30b19de6dda8",
-                "reference": "893794e66482aa0d0ff848ed463e30b19de6dda8",
+                "url": "https://api.github.com/repos/MoovFun/Xo-Mail/zipball/0cdb882cd6f88fb6954a9bdd6f5921a696f6e0d0",
+                "reference": "0cdb882cd6f88fb6954a9bdd6f5921a696f6e0d0",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
                 }
             ],
             "description": "Php email client.",
-            "time": "2020-09-05T16:35:02+00:00"
+            "time": "2020-09-20T11:23:14+00:00"
         },
         {
             "name": "moovfun/xo-route",
@@ -89,12 +89,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MoovFun/Xo-Route.git",
-                "reference": "3f84cc1ffcc3d4e712d0e5838f2b327c1f337fa7"
+                "reference": "c1a5475cce1401b2fc9a435fabff78416473a077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MoovFun/Xo-Route/zipball/3f84cc1ffcc3d4e712d0e5838f2b327c1f337fa7",
-                "reference": "3f84cc1ffcc3d4e712d0e5838f2b327c1f337fa7",
+                "url": "https://api.github.com/repos/MoovFun/Xo-Route/zipball/c1a5475cce1401b2fc9a435fabff78416473a077",
+                "reference": "c1a5475cce1401b2fc9a435fabff78416473a077",
                 "shasum": ""
             },
             "require": {
@@ -126,12 +126,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/MoovFun/Xo-User.git",
-                "reference": "18148484f445358eea02309c055f2b06bd80ca14"
+                "reference": "11af77fe606bcde86f5e051f44dd5fa0ada5c102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MoovFun/Xo-User/zipball/18148484f445358eea02309c055f2b06bd80ca14",
-                "reference": "18148484f445358eea02309c055f2b06bd80ca14",
+                "url": "https://api.github.com/repos/MoovFun/Xo-User/zipball/11af77fe606bcde86f5e051f44dd5fa0ada5c102",
+                "reference": "11af77fe606bcde86f5e051f44dd5fa0ada5c102",
                 "shasum": ""
             },
             "require": {
