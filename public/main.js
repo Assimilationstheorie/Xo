@@ -44,3 +44,28 @@ window.onload = () =>
 	// });
 
 }
+
+window.onscroll = () => {
+	// Add animation class if element visible
+	InView('.inview')
+}
+
+/*
+ * Add animation from data-animation if elemenet visible in window
+ * <div class="inview" data-animation="blob">+</div>
+ */
+function InView(ele = '.inview')
+{
+	let items = document.querySelectorAll(ele);
+
+	items.forEach((i) =>
+	{
+		let anim = i.dataset.animation;
+		let wh = window.innerHeight - 50;
+		let ws = window.scrollY;
+		let offset = i.offsetTop;
+		let wt = offset - ws;
+		console.log("Offset", offset, "Top scroll", ws, "Win top", wt, "height", wh);
+		if(wt < wh) { i.classList.add(anim); }
+	})
+}
