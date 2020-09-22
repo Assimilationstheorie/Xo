@@ -48,16 +48,24 @@ class HomeView implements View
 
 			<label>Gender</label>
 			<select>
-				<option>MALE</option>
-				<option>FEMALE</option>
+				<option>Male</option>
+				<option>Female</option>
 			</select>
 
 			<label>Message</label>
 			<textarea placeholder="Enter message"></textarea>
 
+			<!--
 			<input type="checkbox" name="scales" checked>
 			<input type="radio" name="drone" value="huey" checked>
 			<input type="radio" id="dewey" name="drone" value="dewey">
+			-->
+
+			<label>Privacy</label>
+			<div class="checkbox" data-value="1" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
+			<label>Email notifications</label>
+			<div class="checkbox checkbox-selected" data-value="2" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
+
 			<input type="submit" value="Button">
 		</form>';
 	}
@@ -67,7 +75,7 @@ class HomeView implements View
 		return '
 		<h1>Animations</h1>
 		<div class="center">
-			<div class="blob orange">+</div>
+			<div class="blob color">+</div>
 		</div>
 		<div class="center">
 			<div class="blob-rotate">+</div>

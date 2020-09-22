@@ -1,10 +1,21 @@
+html, body {
+	float: left;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	min-height: 100vh;
+	font-size: 16px;
+	background: #280e58;
+	color: #fff;
+}
+
 .scrollbar {
 	scrollbar-width: thin;
-	scrollbar-color: #f07c2f #fff;
+	scrollbar-color: #8337ff #eee;
 }
 
 ::placeholder {
-	color: #636f80c7;
+	color: #8437ffb2;
 }
 
 .notice {
@@ -22,9 +33,9 @@
 	margin: 5px;
 }
 .notice-green {
-	border: 0px solid #00b83723;
-	background: #00b83723;
-	color: #00b837;
+	border: 0px solid #88ff002f;
+	background: #88ff002f;
+	color: #88ff00;
 }
 .notice-red {
 	border: 0px solid #ff223423;
@@ -47,63 +58,65 @@
 	width: 100%;
 	padding: 5px;
 	margin: 0px 0px 5px 0px;
-	background: #ff223311;
-	border: 1px solid #ff223311;
-	color: #ff2233;
 	font-size: 12px;
 	font-weight: 700;
 	border-radius: 0px;
+	color: #ff2244;
+	background: #ff224423;
+	border: 1px solid #ff224423;
 }
 
 label {
 	float: left;
 	width: 100%;
-	color: #636f80c7;
 	font-size: 13px;
 	font-weight: 700;
 	padding: 10px 0px;
-	letter-spacing: 0.6px
+	letter-spacing: 0.6px;
+	color: #8337ff;
 }
 
 input {
 	float: left;
 	width: 100%;
 	height: 46px;
-	color: #222;
 	font-size: 15px;
 	padding: 13px 15px;
 	margin-bottom: 10px;
-	background: #e0e3e72a;
-	border: 1px solid #e0e3e7;
 	transition: border,background,box-shadow .5s;
 	outline: none;
+	color: #c2cee9;
+	background: #200a47;
+	border: 1px solid #4a288ac4;
 }
 
 select {
 	float: left;
 	width: 100%;
 	height: 46px;
-	color: #222;
 	font-size: 15px;
 	padding: 13px 15px;
 	margin-bottom: 10px;
-	background: #e0e3e72a;
-	border: 1px solid #e0e3e7;
 	transition: border,background,box-shadow .5s;
+	outline: none;
+	color: #c2cee9;
+	background: #200a47;
+	border: 1px solid #4a288ac4;
 }
 
 textarea {
 	float: left;
-	color: #222;
 	font-size: 15px;
 	padding: 13px 15px;
 	margin-bottom: 10px;
-	background: #e0e3e72a;
-	border: 1px solid #e0e3e7;
 	min-height: 150px;
 	min-width: 100%;
 	max-width: 100%;
 	transition: border,background,box-shadow .5s;
+	outline: none;
+	color: #c2cee9;
+	background: #200a47;
+	border: 1px solid #4a288ac4;
 }
 
 button, input[type=submit] {
@@ -114,17 +127,17 @@ button, input[type=submit] {
 	min-width: 125px;
 	padding: 13px 15px;
 	margin-bottom: 10px;
-	color: #f07c2f;
-	background: #fff;
-	border: 1px solid #f07c2f;
 	transition: al .6s;
 	cursor: pointer;
 	transition: background .7s;
+	color: #8337ff;
+	border: 1px solid #8337ff;
+	background: transparent;
 }
 button:hover, input[type=submit]:hover {
 	color: #fff;
-	background: #f07c2f;
-	border: 1px solid #f07c2f;
+	background: #8337ff;
+	border: 1px solid #8337ff;
 }
 
 input[type=checkbox], input[type=radio] {
@@ -142,15 +155,15 @@ select {
 }
 
 input:focus, textarea:focus, select:focus {
-	border: 1px solid #f07c2f;
-	box-shadow: 0px 0px 0px 3px #f07c2f22;
+	border: 1px solid #8337ff;
+	box-shadow: 0px 0px 0px 3px #8337ff22;
 }
 
 input:hover, textarea:hover, select:hover {
-	border: 1px solid #f07c2f;
+	border: 1px solid #8337ff;
 }
 
-/* rounded corners */
+/* round corners */
 input, select, textarea, button {
 	border-radius: 0px;
 }
@@ -166,29 +179,35 @@ Custom checkbox:
 	height: 26px;
 	padding: 5px;
 	margin: 5px;
-	border: 1px solid #e0e3e7;
-	box-shadow: 0px 0px 3px rgba(0,0,0,0.1) inset;
 	box-sizing: border-box;
 	cursor: pointer;
+	transition: all .6s;
+	overflow: hidden;
+	color: #8337ff;
+	background: #200a4723;
+	border: 1px solid #4a288ac4;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5) inset;
 }
 .checkbox:hover {
-	border: 1px solid #f07c2f;
+	border: 1px solid #8337ff;
 }
 .checkbox .checkbox-dot {
 	float: left;
 	width: 15px;
 	height: 15px;
-	background: #aaa;
-	box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+	background: #200a47;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0);
 }
 .checkbox-selected .checkbox-dot {
 	float: left;
 	width: 15px;
 	height: 15px;
-	background: #f07c2f;
-	box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+	background: #8337ff;
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
 }
-/* rounded corners */
-.checkbox, .checkbox-dot {
+.checkbox {
+	border-radius: 0px;
+}
+.checkbox-dot {
 	border-radius: 0px;
 }

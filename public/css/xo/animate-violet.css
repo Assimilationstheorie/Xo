@@ -13,31 +13,36 @@
 	width: 30px;
 	margin: 0px;
 	text-align: center;
-	background: #eee;
+	background: #8337ff;
 	border-radius: 50%;
-	box-shadow: 0 0 0 0 #eee;
+	box-shadow: 0 0 0 0 #8337ff;
 	cursor: pointer;
 	animation: pulse-black 2s infinite;
+	transition: .7s;
 }
 .blob.color {
-	background: rgba(255, 121, 63, 1);
-	box-shadow: 0 0 0 0 rgba(255, 121, 63, 1);
+	background: #8337ff;
+	box-shadow: 0 0 0 0 #8337ff;
 	animation: pulse-anim 2s infinite;
+}
+.blob:hover {
+	color: #200a47;
+	background: #88ff00;
 }
 @keyframes pulse-anim {
 	0% {
 		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 121, 63, 0.7);
+		box-shadow: 0 0 0 0 #8337ff;
 	}
 
 	70% {
 		transform: scale(1);
-		box-shadow: 0 0 0 20px rgba(255, 121, 63, 0);
+		box-shadow: 0 0 0 20px #8337ff00;
 	}
 
 	100% {
 		transform: scale(0.95);
-		box-shadow: 0 0 0 0 rgba(255, 121, 63, 0);
+		box-shadow: 0 0 0 0 #8337ff00;
 	}
 }
 
@@ -50,7 +55,7 @@
 	width: 30px;
 	height: 30px;
 	text-align: center;
-	background: #eee;
+	background: #8337ff;
 	cursor: pointer;
 	transition: transform 0.70s;
 	animation: scale-anim 2s alternate infinite ease-in;
@@ -72,7 +77,7 @@
 	position: relative;
 }
 .radar::before, .radar::after {
-	border: 5px solid rgba(255, 121, 63, 1);
+	border: 5px solid #8337ff;
 	width: 0%;
 	height: 0%;
     content: "";
@@ -107,24 +112,25 @@
 	width: 30px;
 	height: 30px;
 	text-align: center;
-	background: #eee;
-	transition: transform 0.70s;
+	background: #8337ff;
 	cursor: pointer;
+	transition: transform, background .7s;
 }
 .blob-rotate:hover {
 	transition: 0.70s;
 	transform: rotate(360deg);
-	background: #eee;
+	color: #200a47;
+	background: #88ff00;
 }
 
 /* Undeline center link hover */
 .a-usderscore {
-	color: #222;
+	color: #eee;
 	padding: 15px 20px;
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
-	border: 0px solid rgba(255, 121, 63, 0.7);
+	border: 0px solid #8337ff99;
 }
 .a-usderscore::before {
 	background: none repeat scroll 0 0 transparent;
@@ -134,7 +140,7 @@
 	height: 2px;
 	left: 50%;
 	position: absolute;
-	background: rgba(255, 121, 63, 0.7);
+	background: #8337ff99;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 	z-index: 1;
@@ -146,12 +152,12 @@
 
 /* Undeline left link hover */
 .a-usderscore-left {
-	color: #222;
+	color: #eee;
 	padding: 15px 20px;
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
-	border: 0px solid rgba(255, 121, 63, 0.7);
+	border: 0px solid #8337ff99;
 }
 .a-usderscore-left::before {
 	background: none repeat scroll 0 0 transparent;
@@ -161,7 +167,7 @@
 	height: 2px;
 	left: 0%;
 	position: absolute;
-	background: rgba(255, 121, 63, 0.7);
+	background: #8337ff99;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 	z-index: 1;
@@ -174,6 +180,7 @@
 /* Blink bg */
 .blink-bg {
 	transition: transform 0.7s;
+	animation-direction: alternate;
 	animation: blink-bg 1s alternate infinite ease-in;
 }
 @keyframes blink-bg {
