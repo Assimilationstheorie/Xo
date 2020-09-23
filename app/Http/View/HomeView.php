@@ -1,7 +1,6 @@
 <?php
 namespace App\Http\View;
 
-use stdClass;
 use App\Http\View\LeftMenu;
 use App\Http\Component\Html;
 
