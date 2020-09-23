@@ -31,9 +31,6 @@ class HomeView implements View
 	static function ShowForm()
 	{
 		return '
-		<link href="/style.css" rel="stylesheet">
-		<link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
-
 		<form method="post">
 			<h2>Awesome</h2>
 
