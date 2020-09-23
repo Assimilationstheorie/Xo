@@ -7,7 +7,7 @@
 	font-family: Arial, Helvetica, sans-serif;
 	/* Scrollbar color */
 	scrollbar-width: thin;
-	scrollbar-color: #f07c2f #fff;
+	scrollbar-color: #f4b75e #fff;
 }
 
 html, body {
@@ -25,12 +25,13 @@ form {
 	margin: 0px auto;
 }
 
-h1{
+h1 {
 	float: left;
 	width: 100%;
 	margin: 0px;
 	padding: 15px 10px;
-	font-size: 2rem
+	font-size: 2rem;
+	color: #2b2442;
 }
 
 #footer {

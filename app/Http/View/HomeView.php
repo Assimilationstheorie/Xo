@@ -37,11 +37,11 @@ class HomeView implements View
 		<form method="post">
 			<h2>Awesome</h2>
 
-			<div class="notice notice-green"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+			<div class="notice notice-main"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+			<div class="error-input">Invalid email address.</div>
 
 			<label>Email addres</label>
 			<input type="text" placeholder="Enter email address">
-			<div class="error-input">Invalid email address.</div>
 
 			<label>Password</label>
 			<input type="password" placeholder="Enter password">
@@ -61,8 +61,9 @@ class HomeView implements View
 			<input type="radio" id="dewey" name="drone" value="dewey">
 			-->
 
-			<label>Privacy</label>
+			<label>Privacy policy</label>
 			<div class="checkbox" data-value="1" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
+
 			<label>Email notifications</label>
 			<div class="checkbox checkbox-selected" data-value="2" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
 
