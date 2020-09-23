@@ -89,6 +89,17 @@ class ShoppingCart
 		return number_format($cost,2,'.','');
 	}
 
+	function PackingCost()
+	{
+		$cost = 0;
+		foreach ($this->Products as $k => $v)
+		{
+			$cost += $v->PackingCost();
+		}
+
+		return number_format($cost,2,'.','');
+	}
+
 	protected function Hash($pr)
 	{
 		return $pr->Id . md5(serialize($pr->Addons));
@@ -101,20 +112,22 @@ use App\Http\Component\Cart\Product;
 use App\Http\Component\Cart\ShoppingCart;
 
 $a = new Addon();
-$a->Id(1)->Qty(1)->Price(1.55);
+$a->Id(1)->Qty(2)->Price(1.55);
 
 $a1 = new Addon();
-$a1->Id(2)->Qty(1)->Price(1.50)->Packing(1);
+$a1->Id(2)->Qty(1)->Price(1.50)->Packing(2);
 
 $p = new Product();
-$p->Id(1)->Qty(2)->Price(1.50)->Packing(1);
+$p->Id(1)->Qty(2)->Price(1.50)->Packing(2);
 $p->Addon($a);
 $p->Addon($a1);
 // echo $p->Cost();
+// echo $p->PackingCost();
 
 $p1 = new Product();
-$p1->Id(1)->Qty(2)->Price(1.50)->Packing(1);
+$p1->Id(1)->Qty(1)->Price(1.50)->Packing(1);
 // echo $p1->Cost();
+// echo $p1->PackingCost();
 
 $cart = new ShoppingCart();
 $cart->DeliveryCost(4);
@@ -122,7 +135,8 @@ $cart->DeliveryMin(60);
 $cart->Add($p);
 $cart->Add($p1);
 $cart->Add($p1);
-// echo $cart->Cost();
+echo $cart->Cost();
+echo $cart->PackingCost();
 
 // Save cart to session
 // $_SESSION['cart'] = serialize($cart);

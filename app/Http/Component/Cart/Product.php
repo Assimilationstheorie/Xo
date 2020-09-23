@@ -13,59 +13,76 @@ class Product
 	function Id($nr)
 	{
 		$this->Id = (int) $nr;
-
 		return $this;
 	}
 
 	function Qty($nr)
 	{
 		$this->Qty = (int) $nr;
-
 		return $this;
 	}
 
 	function Price($val)
 	{
 		$this->Price = (float) $val;
-
 		return $this;
 	}
 
 	function Packing($val)
 	{
 		$this->Packing = (float) $val;
-
 		return $this;
 	}
 
 	function Name($str)
 	{
 		$this->Name = (string) $name;
-
 		return $this;
 	}
 
 	function Addon($addon)
 	{
 		$this->Addons[] = $addon;
-
 		return $this;
 	}
 
 	function Cost()
 	{
-		$cost = $this->Qty * ( $this->Price + $this->Packing + $this->CostAddons() );
-		return number_format($cost,2,'.','');
+		return $this->ProductCost() + $this->ProductPackingCost() + $this->AddonsCost();
 	}
 
-	protected function CostAddons()
+	function PackingCost()
+	{
+		return $this->ProductPackingCost() + $this->AddonsPackingCost();
+	}
+
+	protected function ProductCost()
+	{
+		return $this->Qty * $this->Price;
+	}
+
+	protected function ProductPackingCost()
+	{
+		return $this->Qty * $this->Packing;
+	}
+
+	protected function AddonsCost()
 	{
 		$cost = 0;
 		foreach ($this->Addons as $v)
 		{
 			$cost += $v->Cost();
 		}
+		return $cost;
+	}
 
+	protected function AddonsPackingCost()
+	{
+		$cost = 0;
+		foreach ($this->Addons as $v)
+		{
+			$cost += $v->PackingCost() * $this->Qty;
+		}
 		return $cost;
 	}
 }

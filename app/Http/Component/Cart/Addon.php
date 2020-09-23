@@ -12,42 +12,45 @@ class Addon
 	function Id($nr)
 	{
 		$this->Id = (int) $nr;
-
 		return $this;
 	}
 
 	function Qty($nr)
 	{
 		$this->Qty = (int) $nr;
-
 		return $this;
 	}
 
 	function Price($val)
 	{
 		$this->Price = (float) $val;
-
 		return $this;
 	}
 
 	function Packing($val)
 	{
 		$this->Packing = (float) $val;
-
 		return $this;
 	}
 
 	function Name($str)
 	{
 		$this->Name = (string) $name;
-
 		return $this;
+	}
+
+	function AddonCost()
+	{
+		return $this->Qty * $this->Price;
+	}
+
+	function PackingCost()
+	{
+		return $this->Qty * $this->Packing;
 	}
 
 	function Cost()
 	{
-		$cost = $this->Qty * ( $this->Price + $this->Packing );
-
-		return number_format($cost,2,'.','');
+		return $this->AddonCost() + $this->PackingCost();
 	}
 }

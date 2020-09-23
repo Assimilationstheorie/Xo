@@ -4,7 +4,6 @@ namespace App\Http\View;
 use stdClass;
 use App\Http\View\LeftMenu;
 use App\Http\Component\Html;
-use App\Http\Component\Cart\ShoppingCart;
 
 class HomeView implements View
 {
