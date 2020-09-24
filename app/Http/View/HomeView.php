@@ -4,6 +4,10 @@ namespace App\Http\View;
 use App\Http\View\LeftMenu;
 use App\Http\Component\Html;
 
+use App\Http\Component\Cart\Cart;
+use App\Http\Component\Cart\Addon;
+use App\Http\Component\Cart\Product;
+
 class HomeView implements View
 {
 	static function Html(array $arr): string
@@ -22,6 +26,8 @@ class HomeView implements View
 
 		// Add menu
 		// $h .= LeftMenu::Html();
+
+		// self::Cart();
 
 		$h .= Html::Footer();
 
@@ -91,5 +97,27 @@ class HomeView implements View
 			<a class="a-usderscore-left">Underscore link</a>
 		</div>
 		';
+	}
+
+	static function Cart()
+	{
+		// Addons
+		$a = new Addon(1, 1, 1.50, 0, 'Słuchawki', 0); // 6.50
+		echo "Addon cost " . $a->TotalCost() . "<br>";
+
+		$a1 = new Addon(2, 1, 2.50, 0, 'Myszka', 0); // 6.50
+		echo "Addon cost " . $a1->TotalCost() . "<br>";
+
+		// Product
+		$p = new Product(1, 1, 15.44, 0, 'Phone', 0); // 146.50
+		$p->Addon($a);
+		$p->Addon($a1);
+		echo "Product cost " . $p->TotalCost() . "<br>";
+
+		// Cart
+		$c = new Cart(9.99, 600);
+		$c->Add($p);
+		$c->Add($p);
+		echo "Cart cost " . $c->TotalCost() . "<br>";
 	}
 }
