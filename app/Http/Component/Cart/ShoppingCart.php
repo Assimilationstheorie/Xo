@@ -29,8 +29,10 @@ class ShoppingCart
 		{
 			$this->Products[$hash]->Qty( (int) $this->Products[$hash]->Qty + (int) $pr->Qty );
 		}
-
-		$this->Products[$hash] = $pr;
+		else
+		{
+			$this->Products[$hash] = $pr;
+		}
 
 		return $this;
 	}
