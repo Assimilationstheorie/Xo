@@ -102,22 +102,26 @@ class HomeView implements View
 	static function Cart()
 	{
 		// Addons
-		$a = new Addon(1, 1, 1.50, 0, 'Słuchawki', 0); // 6.50
+		$a = new Addon(1, 2, 1.50, 1, 'Słuchawki', 0);
 		echo "Addon cost " . $a->TotalCost() . "<br>";
 
-		$a1 = new Addon(2, 1, 2.50, 0, 'Myszka', 0); // 6.50
+		$a1 = new Addon(2, 1, 2.50, 1, 'Myszka', 0);
 		echo "Addon cost " . $a1->TotalCost() . "<br>";
 
 		// Product
-		$p = new Product(1, 1, 15.44, 0, 'Phone', 0); // 146.50
+		$p = new Product(1, 2, 15.44, 2, 'Phone', 0);
 		$p->Addon($a);
 		$p->Addon($a1);
 		echo "Product cost " . $p->TotalCost() . "<br>";
 
 		// Cart
-		$c = new Cart(9.99, 600);
+		$c = new Cart(9.99, 1100);
 		$c->Add($p);
 		$c->Add($p);
+		echo "<br>";
+		echo "Products cost " . $c->ProductsCost() . "<br>";
+		echo "Packing cost " . $c->PackingCost() . "<br>";
+		echo "Delivery cost " . $c->DeliveryCost() . "<br>";
 		echo "Cart cost " . $c->TotalCost() . "<br>";
 	}
 }
