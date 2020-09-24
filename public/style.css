@@ -23,14 +23,14 @@ html, body {
 form {
 	width: 90%;
 	max-width: 360px;
-	margin: 0px auto;
+	margin: 60px auto;
 	padding: 5px 30px 20px 30px;
 	border-radius: 6px;
 	overflow: hidden;
 	transition: all .6s;
 	background: #fff;
 	border: 0px solid #efefef;
-	box-shadow: 0px 0px 0px 7px #fafbfda2, 0px 0px 0px 8px #fff, 0px 0px 8px 10px rgba(0, 0, 0, 0.03);
+	box-shadow: 0px 0px 0px 7px #fafbfdc4, 0px 0px 0px 8px #fff, 0px 0px 8px 10px rgba(0, 0, 0, 0.03);
 }
 form:hover {
 	box-shadow: 0px 0px 0px 7px #d5e5ff3a, 0px 0px 0px 8px #fff, 0px 0px 8px 10px rgba(0, 0, 0, 0.03);

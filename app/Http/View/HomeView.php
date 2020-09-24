@@ -16,7 +16,7 @@ class HomeView implements View
 		$h = Html::Header('Page title', 'Page description', 'home,page', '');
 
 		// Html
-		$h .= '<h1> It Works ... </h1>';
+		// $h .= '<h1> It Works ... </h1>';
 
 		// Sample form
 		$h .= self::ShowForm();
