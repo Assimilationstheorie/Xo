@@ -20,14 +20,14 @@
 	animation: pulse-black 2s infinite;
 }
 .blob.color {
-	background: #1a81f8;
-	box-shadow: 0 0 0 0 #1a81f8;
+	background: #f4b75e;
+	box-shadow: 0 0 0 0 #f4b75e;
 	animation: pulse-anim 2s infinite;
 }
 @keyframes pulse-anim {
 	0% {
 		transform: scale(0.95);
-		box-shadow: 0 0 0 0 #1a81f855;
+		box-shadow: 0 0 0 0 #f4b75e55;
 	}
 
 	70% {
@@ -72,7 +72,7 @@
 	position: relative;
 }
 .radar::before, .radar::after {
-	border: 5px solid #1a81f8;
+	border: 5px solid #f4b75e;
 	width: 0%;
 	height: 0%;
     content: "";
@@ -124,7 +124,7 @@
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
-	border: 0px solid #1a81f855;
+	border: 0px solid #f4b75e55;
 }
 .a-usderscore::before {
 	background: none repeat scroll 0 0 transparent;
@@ -134,7 +134,7 @@
 	height: 2px;
 	left: 50%;
 	position: absolute;
-	background: #1a81f855;
+	background: #f4b75e55;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 	z-index: 1;
@@ -151,7 +151,7 @@
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
-	border: 0px solid #1a81f855;
+	border: 0px solid #f4b75e55;
 }
 .a-usderscore-left::before {
 	background: none repeat scroll 0 0 transparent;
@@ -161,7 +161,7 @@
 	height: 2px;
 	left: 0%;
 	position: absolute;
-	background: #1a81f855;
+	background: #f4b75e55;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 	z-index: 1;
