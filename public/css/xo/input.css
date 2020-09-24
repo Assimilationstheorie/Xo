@@ -25,6 +25,11 @@
 	color: #636f80c7;
 }
 
+::selection {
+	color: #83d400;
+	background: #94df1c36;
+}
+
 .notice {
 	float: left; width: 100%;
 	padding: 10px;
