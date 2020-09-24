@@ -118,6 +118,7 @@ class HomeView implements View
 		$c = new Cart(9.99, 1100);
 		$c->Add($p);
 		$c->Add($p);
+
 		echo "<br>";
 		echo "Products cost " . $c->ProductsCost() . "<br>";
 		echo "Packing cost " . $c->PackingCost() . "<br>";
