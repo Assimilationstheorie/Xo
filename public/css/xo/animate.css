@@ -55,6 +55,11 @@
 	transition: transform 0.70s;
 	animation: scale-anim 2s alternate infinite ease-in;
 }
+.blob-scale:hover {
+	background: #1a81f8;
+	color: #fff;
+}
+
 @keyframes scale-anim {
 	0%   {transform: scale(.8);}
 	100% {transform: scale(1.5);}
@@ -114,7 +119,8 @@
 .blob-rotate:hover {
 	transition: 0.70s;
 	transform: rotate(360deg);
-	background: #eee;
+	background: #1a81f8;
+	color: #fff;
 }
 
 /* Undeline center link hover */
@@ -124,7 +130,7 @@
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
-	border: 0px solid #1a81f855;
+	border: 0px solid #1a81f8;
 }
 .a-usderscore::before {
 	background: none repeat scroll 0 0 transparent;
@@ -134,7 +140,7 @@
 	height: 2px;
 	left: 50%;
 	position: absolute;
-	background: #1a81f855;
+	background: #1a81f8;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 	z-index: 1;
@@ -151,7 +157,7 @@
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
-	border: 0px solid #1a81f855;
+	border: 0px solid #1a81f8;
 }
 .a-usderscore-left::before {
 	background: none repeat scroll 0 0 transparent;
@@ -161,7 +167,7 @@
 	height: 2px;
 	left: 0%;
 	position: absolute;
-	background: #1a81f855;
+	background: #1a81f8;
 	transition: width 0.3s ease 0s, left 0.3s ease 0s;
 	width: 0;
 	z-index: 1;

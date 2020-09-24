@@ -5,6 +5,7 @@
 	--violet: #2b2442;
 	--gray: #eceff2;
 	--gray-dark: #9097a3;
+	--text: #42435a;
 
 	--s1-violet: #946eff;
 	--s1-violet-bg: #38317f;
@@ -28,20 +29,25 @@
 	float: left; width: 100%;
 	padding: 10px;
 	margin: 10px 0px;
-	border: 1px solid #636f80c7;
-	background: #eee;
-	color: #636f80c7;
 	font-size: 14px;
 	font-weight: 700;
+	border: 1px solid #2b2442;
+	background: #2b244201;
+	color: #2b2442;
 	border-radius: 0px;
 }
 .notice i {
 	margin: 5px;
 }
-.notice-main {
-	border: 1px solid #2b244223;
-	background: #2b244223;
-	color: #2b2442;
+.notice-blue {
+	border: 0px solid #1a81f8;
+	background: #1a81f823;
+	color: #1a81f8;
+}
+.notice-deepblue {
+	border: 0px solid #053063;
+	background: #05306323;
+	color: #053063;
 }
 .notice-green {
 	border: 0px solid #00b83723;
@@ -63,6 +69,11 @@
 	background: #ffe60023;
 	color: #e7d000;
 }
+.notice-violet {
+	border: 0px solid #946eff23;
+	background: #946eff23;
+	color: #946eff;
+}
 
 .error-input {
 	float: left;
@@ -78,6 +89,7 @@
 }
 
 h2 {
+	float: left; width: 100%;
 	color: #1a81f8;
 }
 
@@ -178,7 +190,7 @@ input:hover, textarea:hover, select:hover {
 
 /* rounded corners */
 input, select, textarea, button {
-	border-radius: 0px;
+	border-radius: 6px;
 }
 
 /*
@@ -215,6 +227,6 @@ Custom checkbox:
 	box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
 }
 /* rounded corners */
-.checkbox, .checkbox-dot {
-	border-radius: 0px;
+.checkbox, .checkbox-dot, .notice {
+	border-radius: 6px;
 }

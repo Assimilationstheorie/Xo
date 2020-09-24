@@ -34,6 +34,11 @@ h1 {
 	color: #2b2442;
 }
 
+p {
+    white-space: pre-line;
+    overflow-wrap: break-word;
+}
+
 #footer {
 	float: left; width: 100%; overflow: hidden; padding: 20px; background: #eee;
 }

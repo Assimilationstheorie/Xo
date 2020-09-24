@@ -38,10 +38,7 @@ class HomeView implements View
 	{
 		return '
 		<form method="post">
-			<h2>Awesome</h2>
-
-			<div class="notice notice-main"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
-			<div class="error-input">Invalid email address.</div>
+			<h2>Sign Up</h2>
 
 			<label>Email addres</label>
 			<input type="text" placeholder="Enter email address">
@@ -71,6 +68,18 @@ class HomeView implements View
 			<div class="checkbox checkbox-selected" data-value="2" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
 
 			<input type="submit" value="Button">
+
+			<h2>Notifications</h2>
+			<div class="notice notice-red"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+			<div class="notice notice-orange"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+			<div class="notice notice-yellow"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+			<div class="notice notice-green"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+			<div class="notice notice-blue"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+			<div class="notice notice-deepblue"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+			<div class="notice notice-violet"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+
+			<h2>Errors</h2>
+			<div class="error-input">Invalid email address.</div>
 		</form>';
 	}
 
