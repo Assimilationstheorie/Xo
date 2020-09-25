@@ -18,7 +18,7 @@ $p->Addon($a1);
 echo "Product cost " . $p->TotalCost() . "<br>";
 
 // Cart
-$c = new Cart(9.99, 1100);
+$c = new Cart(9.99, 100);
 $c->Add($p);
 $c->Add($p);
 

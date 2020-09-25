@@ -10,10 +10,10 @@ use Xo\User\Activation;
 use Xo\Mail\Send\SendEmail;
 use Xo\Mail\Send\EmailTheme;
 
-use App\Http\View\HomeView;
+use App\Http\View\DemoView;
 use App\Http\Model\User\User;
 
-class Homepage extends Controller
+class Demo extends Controller
 {
 	function Index()
 	{
@@ -57,7 +57,7 @@ class Homepage extends Controller
 			$id = $this->UriParam(2);
 
 			// Get html
-			return HomeView::Html(['id' => $id, 'pa' => $pa]);
+			return DemoView::Html(['id' => $id, 'pa' => $pa]);
 		}
 		catch(Exception $e)
 		{

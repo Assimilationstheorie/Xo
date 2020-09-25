@@ -1,9 +1,12 @@
 <?php
-// Default GET, POST, PUT
-$router->Set('/', 'App/Http/Controller/Homepage', 'Index');
+// Redirect (delete line below)
+$router->Redirect('/','/demo');
+
+// Default methods GET, POST, PUT
+$router->Set('/demo', 'App/Http/Controller/Demo', 'Index');
 
 // Only POST request
-$router->Set('/home/{id}', 'App/Http/Controller/Homepage', 'Index', ['POST']);
+$router->Set('/home/{id}', 'App/Http/Controller/Demo', 'Index', ['POST']);
 
 // Function
 $router->Set('/phpversion', function(){
@@ -14,7 +17,6 @@ $router->Set('/phpversion', function(){
 
 // Login user and create user token
 $router->Set('/api/auth', 'App/Http/Controller/Api/ApiAuth', 'Index', ['POST']);
-
 // Logged user info
 $router->Set('/api/user/info', 'App/Http/Controller/Api/User/ApiUserInfo', 'Index', ['POST', 'GET']);
 

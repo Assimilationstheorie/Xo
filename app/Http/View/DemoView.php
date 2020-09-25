@@ -8,7 +8,7 @@ use App\Http\Component\Cart\Cart;
 use App\Http\Component\Cart\Addon;
 use App\Http\Component\Cart\Product;
 
-class HomeView implements View
+class DemoView implements View
 {
 	static function Html(array $arr): string
 	{
