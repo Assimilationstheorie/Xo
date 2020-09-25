@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\View;
 
-use App\Menu\MenuBox;
+use App\Http\Component\Menu\MenuBox;
 
 class LeftMenu
 {
@@ -9,7 +9,6 @@ class LeftMenu
 	{
 		$html = self::SubMenuLogin();
 		// $html .= self::SubMenu2();
-		// $html .= self::SubMenu3();
 
 		// Better insert style from css
 		$html .= MenuBox::Style();
@@ -19,7 +18,7 @@ class LeftMenu
 
 	static function SubMenuLogin()
 	{
-		$m = new MenuBox('Homepage', '/', '<i class="fas fa-home"></i>');
+		$m = new MenuBox('Demo Page', '/demo', '<i class="fas fa-home"></i>');
 		$m->AddLink('Login', '/login');
 		$m->AddLink('Register', '/register');
 		return $m->Html();

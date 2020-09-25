@@ -1,5 +1,5 @@
 <?php
-namespace App\Menu;
+namespace App\Http\Component\Menu;
 
 /**
  * Sub menu part

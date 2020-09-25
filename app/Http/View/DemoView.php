@@ -3,10 +3,10 @@ namespace App\Http\View;
 
 use App\Http\View\LeftMenu;
 use App\Http\Component\Html;
-
 use App\Http\Component\Cart\Cart;
 use App\Http\Component\Cart\Addon;
 use App\Http\Component\Cart\Product;
+use App\Http\Component\Cache\Cache;
 
 class DemoView implements View
 {
@@ -18,16 +18,21 @@ class DemoView implements View
 		// Html
 		// $h .= '<h1> It Works ... </h1>';
 
+		// Add menu
+		// $h .= LeftMenu::Html();
+
 		// Sample form
 		$h .= self::ShowForm();
 
 		// Animations
-		$h .= self::Animate();
+		// $h .= self::Animate();
 
-		// Add menu
-		// $h .= LeftMenu::Html();
-
+		// Shopping cart
 		// self::Cart();
+
+		// Cache token
+		// self::Cache();
+
 
 		$h .= Html::Footer();
 
@@ -133,5 +138,12 @@ class DemoView implements View
 		echo "Packing cost " . $c->PackingCost() . "<br>";
 		echo "Delivery cost " . $c->DeliveryCost() . "<br>";
 		echo "Cart cost " . $c->TotalCost() . "<br>";
+	}
+
+	static function Cache()
+	{
+		$c = new Cache();
+		echo $c->Set('123', json_encode(['id' => '123456789', 'data' => 'hello']));
+		echo $c->Get('123');
 	}
 }
