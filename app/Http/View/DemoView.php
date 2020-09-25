@@ -7,6 +7,7 @@ use App\Http\Component\Cart\Cart;
 use App\Http\Component\Cart\Addon;
 use App\Http\Component\Cart\Product;
 use App\Http\Component\Cache\Cache;
+use App\Http\Component\Singleton\SingletonSample;
 
 class DemoView implements View
 {
