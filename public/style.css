@@ -30,10 +30,10 @@ form {
 	transition: all .6s;
 	background: #fff;
 	border: 0px solid #e0e3e779;
-	box-shadow: 0px 0px 0px 7px #fafbfd, 0px 0px 0px 9px #fff, 0px 5px 8px 15px rgba(0, 0, 0, 0.03);
+	box-shadow: 0px 0px 0px 7px #fafbfd, 0px 0px 0px 9px #fff, 0px 4px 7px 13px rgba(0, 0, 0, 0.02);
 }
 form:hover {
-	box-shadow: 0px 0px 0px 7px #d5e5ff60, 0px 0px 0px 9px #fff, 0px 5px 8px 15px rgba(0, 0, 0, 0.03);
+	box-shadow: 0px 0px 0px 7px #d5e5ff60, 0px 0px 0px 9px #fff, 0px 4px 7px 13px rgba(0, 0, 0, 0.02);
 }
 
 h1 {
