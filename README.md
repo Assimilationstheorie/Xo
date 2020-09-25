@@ -34,6 +34,7 @@ php -S localhost:8000 -t ./public
 ```
 
 ## Controller class
+Homepage.php
 ```php
 <?php
 namespace App\Http\Controller;
@@ -81,6 +82,7 @@ class Homepage extends Controller
 ```
 
 ## View class
+HomeView.php
 ```php
 <?php
 namespace App\Http\View;
