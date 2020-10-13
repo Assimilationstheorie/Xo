@@ -30,12 +30,12 @@ class ResetView implements View
 				<input type="text" name="email" placeholder="Enter email address">
 
 				<input type="submit" name="submit" value="Reset">
-
-				<div class="center">
-					<a href="/login" class="a-link"> Sing In </a>
-					<a href="/register" class="a-link"> Sign Up </a>
-				</div>
 			</form>
+
+			<div class="links">
+				<a href="/login" class="a-link"> Sing In </a>
+				<a href="/register" class="a-link"> Sign Up </a>
+			</div>
 
 		</div>
 		';

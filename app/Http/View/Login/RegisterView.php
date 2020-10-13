@@ -33,12 +33,12 @@ class RegisterView implements View
 				<input type="password" name="pass" placeholder="Enter password">
 
 				<input type="submit" name="submit" value="Register">
-
-				<div class="center">
-					<a href="/login" class="a-link"> Sing In </a>
-					<a href="/resetpass" class="a-link"> Reset password </a>
-				</div>
 			</form>
+
+			<div class="links">
+				<a href="/login" class="a-link"> Sing In </a>
+				<a href="/resetpass" class="a-link"> Reset password </a>
+			</div>
 
 		</div>
 		';

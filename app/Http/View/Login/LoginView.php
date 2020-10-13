@@ -33,12 +33,12 @@ class LoginView implements View
 				<input type="password" name="pass" placeholder="Enter password">
 
 				<input type="submit" name="submit" value="Login">
-
-				<div class="center">
-					<a href="/register" class="a-link"> Sign Up </a>
-					<a href="/resetpass" class="a-link"> Reset password </a>
-				</div>
 			</form>
+
+			<div class="links">
+				<a href="/register" class="a-link"> Sign Up </a>
+				<a href="/resetpass" class="a-link"> Reset password </a>
+			</div>
 
 		</div>
 		';

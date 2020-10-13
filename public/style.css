@@ -33,7 +33,10 @@ p {
     overflow-wrap: break-word;
 }
 
-input[type=submit]{
+form {
+	margin-bottom: 10px;
+}
+input[type=submit] {
 	margin-top: 20px
 }
 
@@ -50,20 +53,22 @@ input[type=submit]{
 	border-radius: 0px;
 }
 
-.center{
-	float: left;
+.links{
+	margin: 0px auto 50px auto;
 	width: 100%;
+	max-width: 400px;
 	display: flex;
 }
-.center .a-link{
+.links .a-link{
 	width: 100%;
+	margin-top: 10px;
 	padding: 10px;
 	text-align: center;
 	color: #aaa;
 	font-weight: 500;
 	font-size: 14px;
 }
-.center .a-link:hover{
+.links .a-link:hover{
 	color: #1a81f8;
 }
 
