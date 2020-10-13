@@ -30,6 +30,9 @@ class Login extends Controller
 				$u = User::Login((string) $_POST['email'],(string) $_POST['pass'], 0);
 
 				if($u->id > 0) {
+					// Logged user data
+					$_SESSION['logged_user'] = $u;
+					// Redirect
 					header('Location: /panel/profil');
 				} else {
 					$err = '<div class="error-input"> Invalid email or password. </div>';
