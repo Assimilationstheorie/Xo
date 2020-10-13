@@ -33,10 +33,39 @@ p {
     overflow-wrap: break-word;
 }
 
+.ok {
+	float: left;
+	width: 100%;
+	padding: 5px;
+	margin: 0px 0px 5px 0px;
+	background: #00920011;
+	border: 1px solid #00920011;
+	color: #009200;
+	font-size: 12px;
+	font-weight: 700;
+	border-radius: 0px;
+}
+
 .center{
 	float: left;
 	width: 100%;
-	padding: 20px;
+	display: flex;
+}
+.center .a-link{
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	color: #aaa;
+	font-weight: 700;
+}
+.center .a-link:hover{
+	color: #1a81f8;
+}
+
+.content{
+	float: left;
+	width: 100%;
+	min-height: 100vh;
 }
 
 #footer {

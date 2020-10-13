@@ -42,7 +42,7 @@ class UserInfo
 		return Db::Query($sql,$arr)->FetchObj();
 	}
 
-	static function Create(int $user_id, string $alias): int
+	static function Create(int $user_id, string $alias = ''): int
 	{
 		if(empty($alias))
 		{
@@ -83,6 +83,6 @@ class UserInfo
 
 	static function RandAlias()
 	{
-		return 'user_'.abs(crc32(uniqid()));
+		return 'user.'.abs(crc32(uniqid()));
 	}
 }

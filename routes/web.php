@@ -1,9 +1,14 @@
 <?php
 // Redirect (delete line below)
-$router->Redirect('/','/demo');
+$router->Redirect('/','/login');
 
 // Default methods GET, POST, PUT
 $router->Set('/demo', 'App/Http/Controller/Demo', 'Index');
+
+// Authenticate
+$router->Set('/login', 'App/Http/Controller/Login', 'Index');
+$router->Set('/register', 'App/Http/Controller/Login', 'Register');
+$router->Set('/resetpass', 'App/Http/Controller/Login', 'Reset');
 
 // Only POST request
 $router->Set('/home/{id}', 'App/Http/Controller/Demo', 'Index', ['POST']);

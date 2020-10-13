@@ -50,11 +50,13 @@ class User
 	{
 		Valid::Email($email);
 		Valid::Pass($pass);
+
 		$uid = (int) Auth::Create($email, $pass, self::Ip(), $algo);
+
 		if($uid > 0)
 		{
 			UserInfo::Create($uid); // user info with random alias
-			self::SendActivationEmail($uid,$email,$subject, $domain);
+			self::SendActivationEmail($uid,$email,$subject,$domain);
 		}
 		return $uid;
 	}
