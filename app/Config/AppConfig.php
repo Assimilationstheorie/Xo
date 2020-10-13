@@ -19,7 +19,7 @@ class AppConfig
 	const SMTP_FROM_USER = 'Welcome';
 	const SMTP_TLS = false; // true - enabled ssl connection
 	const SMTP_AUTH = false; // true - enabled authentication
-	const SMTP_DEBUG = 1; // Or 1 - enabled
+	const SMTP_DEBUG = 0; // Or 1 - enabled
 
 	// Domain host
 	const HOST = 'xo.xx';
