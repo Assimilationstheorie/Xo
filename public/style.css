@@ -60,7 +60,8 @@ input[type=submit]{
 	padding: 10px;
 	text-align: center;
 	color: #aaa;
-	font-weight: 700;
+	font-weight: 500;
+	font-size: 14px;
 }
 .center .a-link:hover{
 	color: #1a81f8;

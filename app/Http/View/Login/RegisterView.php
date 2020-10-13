@@ -21,7 +21,7 @@ class RegisterView implements View
 		return '
 		<div class="content">
 
-			<img src="/media/img/cross.png" class="form-logo">
+			<a href="/"> <img src="/media/img/cross.png" class="form-logo"> </a>
 
 			<form method="post" action="">
 				<h2>Sign Up</h2>
