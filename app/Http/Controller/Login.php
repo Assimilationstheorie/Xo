@@ -36,14 +36,14 @@ class Login extends Controller
 					// Redirect
 					header('Location: /panel/profil');
 				} else {
-					$err = '<div class="error-input"> Invalid email or password. </div>';
+					$err = '<div class="error-input animate__animated animate__flipInX"> Invalid email or password. </div>';
 				}
 			}
 		}
 		catch(Exception $e)
 		{
 			// $err = $e->getMessage();
-			$err = '<div class="error-input"> Invalid email or password. </div>';
+			$err = '<div class="error-input animate__animated animate__flipInX"> Invalid email or password. </div>';
 		}
 
 		// Get html
@@ -61,16 +61,16 @@ class Login extends Controller
 			{
 				$id = User::Register((string) $_POST['email'],(string) $_POST['pass'], (string) AppConfig::HOST);
 				if($id > 0) {
-					$err = '<div class="ok"> Account has been created. </div>';
+					$err = '<div class="ok animate__animated animate__tada"> Account has been created. </div>';
 				} else {
-					$err = '<div class="error-input"> Invalid email or password. </div>';
+					$err = '<div class="error-input animate__animated animate__flipInX"> Invalid email or password. </div>';
 				}
 			}
 		}
 		catch(Exception $e)
 		{
 			// $err = $e->getMessage();
-			$err = '<div class="error-input"> Invalid email address or account exists. </div>';
+			$err = '<div class="error-input animate__animated animate__flipInX"> Invalid email address or account exists. </div>';
 		}
 
 		// Get html
@@ -88,16 +88,16 @@ class Login extends Controller
 			{
 				$id = User::Reset((string) $_POST['email'], (string) AppConfig::HOST);
 				if($id > 0) {
-					$err = '<div class="ok"> New password has been created. </div>';
+					$err = '<div class="ok animate__animated animate__tada"> New password has been created. </div>';
 				} else {
-					$err = '<div class="error-input"> Invalid email address. </div>';
+					$err = '<div class="error-input animate__animated animate__flipInX"> Invalid email address. </div>';
 				}
 			}
 		}
 		catch(Exception $e)
 		{
 			// $err = $e->getMessage();
-			$err = '<div class="error-input"> Invalid email address. </div>';
+			$err = '<div class="error-input animate__animated animate__flipInX"> Invalid email address. </div>';
 		}
 
 		// Get html
@@ -117,18 +117,18 @@ class Login extends Controller
 				$ok = User::ActivateAccount((string) $code);
 
 				if($ok > 0) {
-					$err = '<div class="ok"> Account has been activated. </div>';
+					$err = '<div class="ok animate__animated animate__tada"> Account has been activated. </div>';
 				}else{
-					$err = '<div class="error-input"> Invalid code. Try reset password. </div>';
+					$err = '<div class="error-input animate__animated animate__flipInX"> Invalid code. Try reset password. </div>';
 				}
 			} else {
-				$err = '<div class="error-input"> Invalid code string. </div>';
+				$err = '<div class="error-input animate__animated animate__flipInX"> Invalid code string. </div>';
 			}
 		}
 		catch(Exception $e)
 		{
 			// $err = $e->getMessage();
-			$err = '<div class="error-input"> Invalid code. Try reset password. </div>';
+			$err = '<div class="error-input animate__animated animate__flipInX"> Invalid code. Try reset password. </div>';
 		}
 
 		// Get html
