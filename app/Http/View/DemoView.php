@@ -42,50 +42,63 @@ class DemoView implements View
 	static function ShowForm()
 	{
 		return '
-		<form method="post">
-			<h2>Sign Up</h2>
+		<div class="content">
 
-			<label>Email addres</label>
-			<input type="text" placeholder="Enter email address">
+			<a href="/"> <img src="/media/img/cross.png" class="form-logo"> </a>
 
-			<label>Password</label>
-			<input type="password" placeholder="Enter password">
+			<form method="post">
+				<h2>Sign Up</h2>
 
-			<label>Gender</label>
-			<select>
-				<option>Male</option>
-				<option>Female</option>
-			</select>
+				<label>Email addres</label>
+				<input type="text" placeholder="Enter email address">
 
-			<label>Message</label>
-			<textarea placeholder="Enter message"></textarea>
+				<label>Password</label>
+				<input type="password" placeholder="Enter password">
 
-			<!--
-			<input type="checkbox" name="scales" checked>
-			<input type="radio" name="drone" value="huey" checked>
-			<input type="radio" id="dewey" name="drone" value="dewey">
-			-->
+				<label>Gender</label>
+				<select>
+					<option>Male</option>
+					<option>Female</option>
+				</select>
 
-			<label>Privacy policy</label>
-			<div class="checkbox" data-value="1" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
+				<label>Message</label>
+				<textarea placeholder="Enter message"></textarea>
 
-			<label>Email notifications</label>
-			<div class="checkbox checkbox-selected" data-value="2" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
+				<!--
+				<input type="checkbox" name="scales" checked>
+				<input type="radio" name="drone" value="huey" checked>
+				<input type="radio" id="dewey" name="drone" value="dewey">
+				-->
 
-			<input type="submit" value="Button">
+				<label>Privacy policy</label>
+				<div class="checkbox" data-value="1" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
 
-			<h2>Notifications</h2>
-			<div class="notice notice-red"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
-			<div class="notice notice-orange"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
-			<div class="notice notice-yellow"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
-			<div class="notice notice-green"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
-			<div class="notice notice-blue"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
-			<div class="notice notice-deepblue"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
-			<div class="notice notice-violet"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+				<label>Email notifications</label>
+				<div class="checkbox checkbox-selected" data-value="2" onclick="this.classList.toggle(\'checkbox-selected\')"><div class="checkbox-dot"></div></div>
 
-			<h2>Errors</h2>
-			<div class="error-input">Invalid email address.</div>
-		</form>';
+				<input type="submit" value="Button">
+
+				<h2>Notifications</h2>
+				<div class="notice notice-red"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+				<div class="notice notice-orange"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+				<div class="notice notice-yellow"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+				<div class="notice notice-green"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+				<div class="notice notice-blue"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+				<div class="notice notice-deepblue"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+				<div class="notice notice-violet"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
+
+				<h2>Errors</h2>
+				<div class="error-input">Invalid email address.</div>
+			</form>
+
+			<div class="links">
+				<a href="/login" class="a-link"> Sing In </a>
+				<a href="/resetpass" class="a-link"> Reset password </a>
+			</div>
+
+		</div>
+
+		';
 	}
 
 	static function Animate()
