@@ -77,6 +77,7 @@
 	background: #fafbfd;
 	border: 1px solid #eceff2;
 	border-radius: 50%;
+	transition: all .6s;
 }
 .notify-icon i {
 	width: 100%;
@@ -98,6 +99,10 @@
 	box-shadow: 0px 1px 3px #0099ffaa, inset 0 1px #ffffff;
 	border-radius: 4px;
 	z-index: 999;
+}
+.notify-icon:hover {
+	border: 1px solid #1a81f8;
+	box-shadow: 0px 0px 0px 3px #1a81f823;
 }
 .notify-icon:hover span {
 	background: #f23;
