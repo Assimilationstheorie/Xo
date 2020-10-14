@@ -47,7 +47,7 @@ class DemoView implements View
 			<a href="/"> <img src="/media/img/cross.png" class="form-logo"> </a>
 
 			<form method="post">
-				<h2>Sign Up</h2>
+				<h2>Inputs</h2>
 
 				<label>Email addres</label>
 				<input type="text" placeholder="Enter email address">
