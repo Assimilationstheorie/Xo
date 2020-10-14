@@ -1,18 +1,24 @@
 <?php
 // Redirect (delete line below)
 $router->Redirect('/','/demo');
-
 // Default methods GET, POST, PUT
 $router->Set('/demo', 'App/Http/Controller/Demo', 'Index');
+// Only POST request
+$router->Set('/home/{id}', 'App/Http/Controller/Demo', 'Index', ['POST']);
 
 // Authenticate
 $router->Set('/login', 'App/Http/Controller/Login', 'Index');
 $router->Set('/register', 'App/Http/Controller/Login', 'Register');
 $router->Set('/resetpass', 'App/Http/Controller/Login', 'Reset');
 $router->Set('/activation/{id}', 'App/Http/Controller/Login', 'Activation');
+$router->Set('/logout', 'App/Http/Controller/Login', 'Logout');
 
-// Only POST request
-$router->Set('/home/{id}', 'App/Http/Controller/Demo', 'Index', ['POST']);
+// Client Panel User
+$router->Redirect('/panel','/panel/profil');
+$router->Set('/panel/profil', 'App/Http/Controller/Panel/Profil', 'Index');
+
+// Client Panel Admin
+$router->Set('/panel/profil', 'App/Http/Controller/Panel/Profil', 'Index');
 
 // Function
 $router->Set('/phpversion', function(){

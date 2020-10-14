@@ -23,7 +23,7 @@ class User
 		Valid::Email($email);
 
 		$user = Auth::Get($email);
-		if($user->pass == Auth::PassHash($pass, $algo) && $user->active == 1 && $user->baned == 0 && $user->closed == 0)
+		if($user->pass == Auth::PassHash($pass, $algo) && $user->active == 1)
 		{
 			if($on_token)
 			{

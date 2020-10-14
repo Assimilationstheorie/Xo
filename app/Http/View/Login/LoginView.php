@@ -3,7 +3,6 @@ namespace App\Http\View\Login;
 
 use App\Http\View\View;
 use App\Http\Component\Html;
-use App\Http\View\Menu\MenuTop;
 
 class LoginView implements View
 {

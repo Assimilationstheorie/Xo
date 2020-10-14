@@ -2,14 +2,6 @@
 namespace App\Http\Controller;
 
 use Exception;
-use Xo\Db\Mysql\Db;
-use Xo\User\Auth;
-use Xo\User\Token;
-use Xo\User\Valid;
-use Xo\User\Activation;
-use Xo\Mail\Send\SendEmail;
-use Xo\Mail\Send\EmailTheme;
-
 use App\Config\AppConfig;
 use App\Http\View\Login\LoginView;
 use App\Http\View\Login\RegisterView;
@@ -19,6 +11,54 @@ use App\Http\Model\User\User;
 
 class Login extends Controller
 {
+	static function IsAuthenticated(array $role = ['user'])
+	{
+		if(empty($_SESSION['logged_user'])) {
+			self::LogoutNow();
+		} else {
+			$user = $_SESSION['logged_user'];
+			// Error user
+			if(!is_object($user) || $user->id <= 0 || !in_array($user->role, $role)) {
+				self::LogoutNow();
+			}
+			// Banned user
+			if($user->baned > 0) {
+				self::BanedNow();
+			}
+			// Account closed
+			if($user->closed > 0) {
+				self::ClosedNow();
+			}
+			return $user;
+		}
+	}
+
+	static function LogoutNow()
+	{
+		unset($_SESSION['logged_user']);
+		unset($_SESSION);
+		session_destroy();
+		header('Location: /login');
+		die();
+	}
+
+	static function BanedNow()
+	{
+		header('Location: /error/baned');
+		die();
+	}
+
+	static function ClosedNow()
+	{
+		header('Location: /error/closed');
+		die();
+	}
+
+	function Logout()
+	{
+		self::LogoutNow();
+	}
+
 	function Index()
 	{
 		// Error
@@ -31,6 +71,8 @@ class Login extends Controller
 				$u = User::Login((string) $_POST['email'],(string) $_POST['pass'], 0);
 
 				if($u->id > 0) {
+					// Unset pass
+					unset($u->pass);
 					// Logged user data
 					$_SESSION['logged_user'] = $u;
 					// Redirect
