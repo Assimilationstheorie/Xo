@@ -18,7 +18,7 @@ $router->Redirect('/panel','/panel/profil');
 $router->Set('/panel/profil', 'App/Http/Controller/Panel/Profil', 'Index');
 
 // Client Panel Admin
-$router->Set('/panel/profil', 'App/Http/Controller/Panel/Profil', 'Index');
+$router->Set('/panel/clients', 'App/Http/Controller/Panel/Clients.php', 'Index');
 
 // Function
 $router->Set('/phpversion', function(){

@@ -20,9 +20,9 @@ class Profil extends Controller
 
 		try
 		{
+			// Only users with role 'user'
 			$user = Login::IsAuthenticated(['user']);
 			// print_r($user);
-			// print_r($_SESSION['logged_user']);
 		}
 		catch(Exception $e)
 		{
