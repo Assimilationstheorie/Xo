@@ -5,12 +5,12 @@ use App\Http\View\View;
 use App\Http\Component\Html;
 use App\Http\View\Menu\MenuTop;
 
-class LoginView implements View
+class ActivationView implements View
 {
 	static function Html(array $arr): string
 	{
 		// Header
-		$h = Html::Header('Sign In', 'Login user.', 'login page', '');
+		$h = Html::Header('Activation', 'Confirm email address.', 'activation page', '');
 		$h .= self::ShowForm($arr['err']);
 		$h .= Html::Footer();
 
@@ -25,19 +25,12 @@ class LoginView implements View
 			<a href="/"> <img src="/media/img/cross.png" class="form-logo"> </a>
 
 			<form method="post" action="">
-				<h2>Sign In</h2>
+				<h2>Activation</h2>
 				'.$err.'
-				<label>Email addres</label>
-				<input type="text" name="email" placeholder="Enter email address">
-
-				<label>Password</label>
-				<input type="password" name="pass" placeholder="Enter password">
-
-				<input type="submit" name="submit" value="Login">
 			</form>
 
 			<div class="links">
-				<a href="/register" class="a-link"> Sign Up </a>
+				<a href="/login" class="a-link"> Sign In </a>
 				<a href="/resetpass" class="a-link"> Reset password </a>
 			</div>
 

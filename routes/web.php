@@ -9,6 +9,7 @@ $router->Set('/demo', 'App/Http/Controller/Demo', 'Index');
 $router->Set('/login', 'App/Http/Controller/Login', 'Index');
 $router->Set('/register', 'App/Http/Controller/Login', 'Register');
 $router->Set('/resetpass', 'App/Http/Controller/Login', 'Reset');
+$router->Set('/activation/{id}', 'App/Http/Controller/Login', 'Activation');
 
 // Only POST request
 $router->Set('/home/{id}', 'App/Http/Controller/Demo', 'Index', ['POST']);

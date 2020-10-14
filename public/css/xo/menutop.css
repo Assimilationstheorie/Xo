@@ -1,0 +1,50 @@
+/* Menu Top */
+.menu-top {
+	float: left;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #eee;
+	font-size: 14px;
+}
+.menu-top * {
+	float: left;
+	padding: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+.menu-top .logo {
+	flex: 1 0 auto;
+}
+.menu-top .logo img {
+	width: 60px;
+	height: 60px;
+}
+.menu-top .search {
+	width: 100%;
+}
+.menu-top .notify {
+	flex: 1 0 auto;
+}
+.menu-top .cogs {
+	flex: 1 0 auto;
+}
+.menu-top .avatar {
+	flex: 1 0 auto;
+}
+.menu-top .avatar img {
+	float: right;
+	width: 50px;
+	height: 50px;
+}
+.search-input {
+	float: left;
+	width: 100%;
+	max-width: 250px;
+	background: #fefefe;
+	height: auto;
+	margin: 0px;
+	padding: 5px 10px;
+}

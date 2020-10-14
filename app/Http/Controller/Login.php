@@ -14,6 +14,7 @@ use App\Config\AppConfig;
 use App\Http\View\Login\LoginView;
 use App\Http\View\Login\RegisterView;
 use App\Http\View\Login\ResetView;
+use App\Http\View\Login\ActivationView;
 use App\Http\Model\User\User;
 
 class Login extends Controller
@@ -101,5 +102,36 @@ class Login extends Controller
 
 		// Get html
 		return ResetView::Html(['err' => $err]);
+	}
+
+	function Activation()
+	{
+		// Error
+		$err = '';
+		// Secret code
+		$code = $this->UriParam(2);
+
+		try
+		{
+			if(!empty($code)) {
+				$ok = User::ActivateAccount((string) $code);
+
+				if($ok > 0) {
+					$err = '<div class="ok"> Account has been activated. </div>';
+				}else{
+					$err = '<div class="error-input"> Invalid code. Try reset password. </div>';
+				}
+			} else {
+				$err = '<div class="error-input"> Invalid code string. </div>';
+			}
+		}
+		catch(Exception $e)
+		{
+			// $err = $e->getMessage();
+			$err = '<div class="error-input"> Invalid code. Try reset password. </div>';
+		}
+
+		// Get html
+		return ActivationView::Html(['err' => $err]);
 	}
 }
