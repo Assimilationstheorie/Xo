@@ -5,7 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid #eee;
+	border: 1px solid #eceff2;
 	font-size: 14px;
 }
 .menu-top * {
@@ -13,7 +13,7 @@
 }
 .menu-top .logo {
 	flex: 1 0 auto;
-	border-right: 1px solid #eee;
+	border-right: 1px solid #eceff2;
 	height: 60px;
 }
 .menu-top .logo img {
@@ -24,7 +24,7 @@
 	width: 100%;
 	display: flex;
 	padding: 15px;
-	border-right: 1px solid #eee;
+	border-right: 1px solid #eceff2;
 	height: 60px;
 	align-items: center;
 	justify-content: flex-start;
@@ -33,7 +33,7 @@
 	display: flex;
 	flex: 1 0 auto;
 	padding: 15px 5px;
-	border-right: 1px solid #eee;
+	border-right: 1px solid #eceff2;
 	height: 60px;
 	align-items: center;
 	justify-content: flex-end;
@@ -41,7 +41,7 @@
 .menu-top .cogs {
 	display: flex;
 	flex: 1 0 auto;
-	border-right: 1px solid #eee;
+	border-right: 1px solid #eceff2;
 	height: 60px;
 	align-items: center;
 	justify-content: center;
@@ -56,13 +56,13 @@
 	height: 50px;
 	padding: 3px;
 	border-radius: 50%;
-	border: 1px solid #eee;
+	border: 1px solid #eceff2;
 }
 .search-input {
 	float: left;
 	width: 100%;
 	max-width: 250px;
-	background: #fefefe;
+	background: #fafbfd;
 	height: auto;
 	margin: 0px;
 	padding: 5px 10px;
@@ -70,17 +70,24 @@
 
 .notify-icon {
 	position: relative;
-	height: 100%;
-	padding: 10px;
+	height: 40px;
+	width: 40px;
+	margin: 0px 5px;
 	cursor: pointer;
+	background: #fafbfd;
+	border: 1px solid #eceff2;
+	border-radius: 50%;
 }
 .notify-icon i {
-	color: #222;
+	width: 100%;
+	height: 100%;
+	padding-top: 8px;
+	text-align: center;
 }
 .notify-icon span {
 	position: absolute;
-	top: -1px;
-	right: 1px;
+	top: -5px;
+	right: -5px;
 	padding: 2px 5px;
 	min-width: 20px;
 	font-size: 10px;
