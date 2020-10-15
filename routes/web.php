@@ -16,7 +16,11 @@ $router->Set('/logout', 'App/Http/Controller/Login', 'Logout');
 // Client Panel User
 $router->Redirect('/panel','/panel/profil/info');
 $router->Redirect('/panel/profil','/panel/profil/info');
+
 $router->Set('/panel/profil/info', 'App/Http/Controller/Panel/Profil', 'Index');
+$router->Set('/panel/profil/avatar', 'App/Http/Controller/Panel/Profil', 'Index');
+$router->Set('/panel/profil/pass', 'App/Http/Controller/Panel/Profil', 'Index');
+
 $router->Set('/panel/orders/all', 'App/Http/Controller/Panel/Profil', 'Index');
 $router->Set('/panel/orders/add', 'App/Http/Controller/Panel/Profil', 'Index');
 
