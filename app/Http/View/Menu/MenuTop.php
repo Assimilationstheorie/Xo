@@ -1,13 +1,13 @@
 <?php
 namespace App\Http\View\Menu;
 
-use App\Http\View\Menu\Menu;
+use App\Http\View\Menu\MenuPanel;
 
 class MenuTop
 {
 	static function Html(): string
 	{
-		$m = new Menu();
+		$m = new MenuPanel();
 		// Part
 		$m->AddLink('/panel/orders', '/panel/orders/all', 'Orders');
 		$m->AddSubLink('/panel/orders', '/panel/orders/all', 'All');

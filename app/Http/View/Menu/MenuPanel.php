@@ -1,13 +1,15 @@
 <?php
 namespace App\Http\View\Menu;
 
-class Menu
+class MenuPanel
 {
 	public $MainLinks = [];
 	public $SubLinks = [];
 
 	function AddLink($main_url, $url, $name)
 	{
+		$url = rtrim($url, '/');
+		$main_url = rtrim($main_url, '/');
 		$hash = md5($main_url);
 
 		$this->MainLinks[$hash] = ['url' => $url, 'name' => $name, 'main_url' => $main_url];
@@ -15,6 +17,8 @@ class Menu
 
 	function AddSubLink($main_url, $url, $name)
 	{
+		$url = rtrim($url, '/');
+		$main_url = rtrim($main_url, '/');
 		$hash = md5($main_url);
 
 		$this->SubLinks[$hash][] = ['url' => $url, 'name' => $name];
@@ -25,6 +29,7 @@ class Menu
 		return parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
 	}
 
+	// Get menu main part
 	function ShowMain()
 	{
 		$url = $this->GetUrl();
@@ -42,11 +47,10 @@ class Menu
 				$h .= '<a href="'.$v['url'].'" class="menu-link">'.$v['name'].'</a>';
 			}
 		}
-		// print_r($this->MainLinks);
-		// print_r($this->SubLinks);
 		return $m . $h;
 	}
 
+	// Get submenu part
 	function ShowSub()
 	{
 		$curl = $this->GetUrl();
