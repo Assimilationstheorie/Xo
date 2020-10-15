@@ -8,6 +8,8 @@ use App\Http\Component\Cart\Addon;
 use App\Http\Component\Cart\Product;
 use App\Http\Component\Cache\Cache;
 
+use App\Sms\JustSendClient;
+
 class DemoView implements View
 {
 	static function Html(array $arr): string
