@@ -67,6 +67,32 @@
 	margin: 0px;
 	padding: 5px 10px;
 }
+.menu-top-popup {
+	display: none;
+	position: absolute;
+	top: 61px;
+	right: 0px;
+	width: 100%;
+	max-width: 250px;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #eceff2;
+	box-shadow: 0px 1px 3px #eceff2;
+	overflow: hidden;
+	transition: all .6s;
+	z-index: 999;
+}
+.menu-top-popup .popup-link {
+	float: left;
+	width: 100%;
+	color: #222;
+}
+.menu-top-popup .popup-link:hover {
+	color: #1a81f8;
+}
+.menu-top-show-popup:hover .menu-top-popup {
+	display: inherit;
+}
 
 .menu-bar {
 	position: relative;
