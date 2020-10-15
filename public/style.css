@@ -36,6 +36,7 @@ p {
 }
 
 form {
+	margin-top: 0px;
 	margin-bottom: 10px;
 }
 input[type=submit] {
@@ -108,6 +109,8 @@ input[type=submit] {
 .form-logo{
 	display: block;
 	margin: 30px auto;
+	height: 60px;
+	width: auto;
 }
 
 #footer {
