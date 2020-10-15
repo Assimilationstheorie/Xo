@@ -68,6 +68,70 @@
 	padding: 5px 10px;
 }
 
+.menu-bar {
+	position: relative;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-bottom: 1px solid #eceff2;
+}
+.menu-burger {
+	position: absolute;
+	top: 0px; right: 0px;
+	padding: 13px 20px;
+	cursor: pointer;
+}
+.menu-link {
+	float: left;
+	padding: 10px 20px;
+	color: #222;
+}
+.menu-link:hover {
+	float: left;
+	color: #1a81f8;
+}
+.menu-link-active {
+	float: left;
+	color: #1a81f8;
+	border-bottom: 2px solid #1a81f8
+}
+
+.submenu-bar {
+	float: left;
+	width: 100%;
+	padding: 0px 2%;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-bottom: 0px solid #eceff2;
+	background: #fafbfd;
+}
+.submenu-link {
+	float: left;
+	padding: 10px 20px;
+	color: #1a82f8a6;
+	font-size: 14px;
+	font-weight: 400;
+	border-bottom: 2px solid transparent;
+}
+.submenu-link:hover {
+	float: left;
+	color: #1a81f8;
+}
+.submenu-link-active {
+	float: left;
+	font-weight: 6400;
+	color: #1a81f8;
+	border-bottom: 1px solid #1a81f8;
+}
+.submenu-link-active:hover {
+	color: #1a81f8;
+}
+
+.menu-bar-open {
+	height: auto !important;
+}
+
 .notify-icon {
 	position: relative;
 	height: 40px;
@@ -94,9 +158,9 @@
 	font-size: 10px;
 	text-align: center;
 	color: #fff;
-	background: #09f;
-	border: 1px solid #09f;
-	box-shadow: 0px 1px 3px #0099ffaa, inset 0 1px #ffffff;
+	background: #1a81f8;
+	border: 1px solid #1a81f8;
+	box-shadow: 0px 1px 3px #1a81f8aa, inset 0 1px #ffffff;
 	border-radius: 4px;
 	z-index: 999;
 }
@@ -121,5 +185,21 @@
 
 	.menu-top .avatar {
 		max-width: 60px;
+	}
+
+	.menu-bar {
+		height: 42px;
+	}
+
+	.menu-link {
+		width: 100%;
+	}
+
+	.menu-link-active {
+		width: auto;
+	}
+
+	.submenu-link {
+		font-size: 12px;
 	}
 }
