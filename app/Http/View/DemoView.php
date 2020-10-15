@@ -49,6 +49,10 @@ class DemoView implements View
 			<a href="/"> <img src="/media/img/cross.png" class="form-logo"> </a>
 
 			<form method="post">
+				<h2>Errors</h2>
+				<div class="ok animate__animated animate__bounceIn">Account has been created.</div>
+				<div class="error-input animate__animated animate__flipInX">Invalid email address.</div>
+
 				<h2>Inputs</h2>
 
 				<label>Email addres</label>
@@ -88,9 +92,6 @@ class DemoView implements View
 				<div class="notice notice-blue"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
 				<div class="notice notice-deepblue"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
 				<div class="notice notice-violet"> <i class="fas fa-exclamation"></i> Your account has been created. </div>
-
-				<h2>Errors</h2>
-				<div class="error-input">Invalid email address.</div>
 			</form>
 
 			<div class="links">

@@ -29,7 +29,7 @@ class ResetView implements View
 				<label>Email addres</label>
 				<input type="text" name="email" placeholder="Enter email address">
 
-				<input type="submit" name="submit" value="Reset">
+				<input type="submit" name="submit" value="Reset" class="animate__animated animate__flipInX">
 			</form>
 
 			<div class="links">

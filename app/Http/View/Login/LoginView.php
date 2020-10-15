@@ -32,7 +32,7 @@ class LoginView implements View
 				<label>Password</label>
 				<input type="password" name="pass" placeholder="Enter password">
 
-				<input type="submit" name="submit" value="Login">
+				<input type="submit" name="submit" value="Login" class="animate__animated animate__flipInX">
 			</form>
 
 			<div class="links">
