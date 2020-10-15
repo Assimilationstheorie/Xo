@@ -26,11 +26,14 @@ class ProfilView implements View
 				<form class="panel-form"  method="post">
 					<h3>Contact informations</h3>
 
-					<label>Email addres</label>
-					<input type="text" placeholder="Enter email address">
-
 					<label>Alias</label>
 					<input type="text" placeholder="Enter alias / username">
+
+					<label>Name</label>
+					<input type="text" placeholder="Enter name">
+
+					<label>Email addres</label>
+					<input type="text" placeholder="Enter email address">
 
 					<label>Phone</label>
 					<input type="text" placeholder="Enter phone">
