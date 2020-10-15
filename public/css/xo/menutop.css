@@ -100,7 +100,7 @@
 .submenu-bar {
 	float: left;
 	width: 100%;
-	padding: 0px 2%;
+	padding: 0px calc(2% + 10px);
 	overflow: hidden;
 	box-sizing: border-box;
 	border-bottom: 0px solid #eceff2;
