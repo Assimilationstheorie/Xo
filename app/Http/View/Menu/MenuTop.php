@@ -51,20 +51,13 @@ class MenuTop
 				<!--
 				<a href="/panel/profil" class="menu-link menu-link-active">Profil</a>
 				<a href="/panel/clients" class="menu-link">Clients</a>
-				<a href="/panel/addons" class="menu-link">Addons</a>
-				<a href="/panel/categories" class="menu-link">Categories</a>
-				<a href="/panel/products" class="menu-link">Products</a>
-				<a href="/panel/posts" class="menu-link">Posts</a>
-				<a href="/panel/settings" class="menu-link">Settings</a>
 				-->
 			</div>
 			<div class="submenu-bar">
 				'.$sub.'
 				<!--
-				<a href="/panel/addons" class="submenu-link submenu-link-active">Info</a>
-				<a href="/panel/users" class="submenu-link">Avatar</a>
-				<a href="/panel/orders" class="submenu-link">Address</a>
-				<a href="/panel/products" class="submenu-link">Password</a>
+				<a href="/panel/info" class="submenu-link submenu-link-active">Info</a>
+				<a href="/panel/avatar" class="submenu-link">Avatar</a>
 				-->
 			</div>
 		';
