@@ -20,7 +20,7 @@ class ProfilView implements View
 		return MenuTop::Html() . '
 		<div class="content">
 			<div class="box">
-				<h3 class="animate__animated animate__fadeIn"> Profil Info </h3>
+				<h1 class="animate__animated animate__fadeIn"> Profil Info </h1>
 				<p>Sample client panel page. </p>
 			</div>
 		</div>
