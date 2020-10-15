@@ -36,7 +36,6 @@ p {
 }
 
 form {
-	margin-top: 0px;
 	margin-bottom: 10px;
 }
 input[type=submit] {
@@ -90,20 +89,48 @@ input[type=submit] {
 	padding: 10px;
 	background: #fff;
 	border-radius: 0px;
-	border: 1px solid #1a81f811;
+	border: 0px solid #1a81f811;
 	box-sizing: border-box;
 	overflow: hidden;
 }
 .box h1 {
-	margin: 0px;
+	float: left;
+	width: 96%;
+	margin: 0px 2%;
 	padding: 0px;
+	font-size: 25px;
 	font-weight: 700;
 	color: #1a81f8;
 	font-family: 'Open Sans';
 }
 .box p {
+	float: left;
+	width: 96%;
+	margin: 0px 2%;
 	padding: 0px;
+	font-size: 14px;
 	font-family: 'Open Sans';
+	color: #999;
+}
+
+form.panel-form {
+	float: left;
+	width: 96%;
+	margin: 10px 2%;
+	padding: 20px;
+	max-width: 100%;
+	box-shadow: none;
+	border: 1px solid #1a81f811;
+}
+form.panel-form h3 {
+	margin: 0px;
+	color: #002855;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+form.panel-form label {
+	color: #002855;
+	font-weight: 400
 }
 
 .form-logo{
