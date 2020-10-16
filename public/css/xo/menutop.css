@@ -192,9 +192,9 @@
 	font-size: 10px;
 	text-align: center;
 	color: #fff;
-	background: #1a81f8;
-	border: 1px solid #1a81f8;
-	box-shadow: 0px 1px 3px #1a81f8aa, inset 0 1px #ffffff;
+	background: #f24;
+	border: 1px solid #f24;
+	box-shadow: 0px 1px 3px #ff2244aa, inset 0 1px #ffffff;
 	border-radius: 4px;
 	z-index: 999;
 }
@@ -203,9 +203,13 @@
 	box-shadow: 0px 0px 0px 3px #1a81f823;
 }
 .notify-icon:hover span {
-	background: #f23;
-	border: 1px solid #f23;
-	box-shadow: 0px 1px 3px #ff2233ee, inset 0 1px #ffffff;
+	background: #1a81f8;
+	border: 1px solid #1a81f8;
+	box-shadow: 0px 1px 3px #1a81f8ee, inset 0 1px #ffffff;
+}
+
+.notify-hide {
+	opacity: 0;
 }
 
 @media all and (max-width: 768px) {

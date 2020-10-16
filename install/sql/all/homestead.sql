@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 14 Paź 2020, 21:03
+-- Czas generowania: 16 Paź 2020, 16:38
 -- Wersja serwera: 10.3.23-MariaDB-0+deb10u1
 -- Wersja PHP: 7.4.10
 
@@ -288,7 +288,28 @@ INSERT INTO `user_info` (`id`, `rf_user_id`, `alias`, `name`, `country`, `avatar
 (8, 135, 'user.205973085', '', '', '', '', '', '', 'NONE', 0, ''),
 (9, 137, 'user.910633704', '', '', '', '', '', '', 'NONE', 0, ''),
 (10, 139, 'user.332933192', '', '', '', '', '', '', 'NONE', 0, '');
-COMMIT;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `user_login`
+--
+
+DROP TABLE IF EXISTS `user_login`;
+CREATE TABLE IF NOT EXISTS `user_login` (
+  `id` bigint(22) NOT NULL AUTO_INCREMENT,
+  `rf_user_id` bigint(22) NOT NULL,
+  `ip` varchar(50) NOT NULL DEFAULT '',
+  `info` text NOT NULL DEFAULT '',
+  `time` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tabela Truncate przed wstawieniem `user_login`
+--
+
+TRUNCATE TABLE `user_login`;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

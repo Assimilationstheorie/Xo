@@ -30,9 +30,9 @@ class MenuTop
 					<input type="text" placeholder="Search" class="search-input">
 				</div>
 				<div class="notify">
-					<div class="notify-icon"> <i class="fas fa-bell"></i> <span> 1 </span> </div>
-					<div class="notify-icon"> <i class="fas fa-envelope"></i> <span> 23 </span> </div>
-					<div class="notify-icon"> <i class="fas fa-comment"></i> <span> 69 </span> </div>
+					<a href="/"> <div class="notify-icon"> <i class="fas fa-bell"></i> <span id="notify-bell"> 23 </span> </div> </a>
+					<a href="/"> <div class="notify-icon"> <i class="fas fa-envelope"></i> <span id="notify-envelope" class="notify-hide"> 19 </span> </div> </a>
+					<a href="/"> <div class="notify-icon"> <i class="fas fa-comment"></i> <span id="notify-comment"> 69 </span> </div> </a>
 				</div>
 				<div class="cogs">
 					<i class="fas fa-cog"></i> <span> Settings </span>

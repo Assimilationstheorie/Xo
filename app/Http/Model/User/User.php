@@ -25,6 +25,10 @@ class User
 		$user = Auth::Get($email);
 		if($user->pass == Auth::PassHash($pass, $algo) && $user->active == 1)
 		{
+			// Log user
+			Log::Now((int) $user->id, (string) self::Ip(), (string) $_SERVER['HTTP_USER_AGENT']);
+
+			// Token
 			if($on_token)
 			{
 				// Create or update token, expiration time 1 hour.
