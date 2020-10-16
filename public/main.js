@@ -72,10 +72,10 @@ function InView(ele = '.inview')
 
 function ErrorImage(it)
 {
-    it.src='/media/img/noimg.png';
+    it.src='/media/img/cross.png';
 }
 
 function ErrorAvatar(it)
 {
-    it.src='/media/images/avatar/avatar.jpg';
+    it.src='/media/img/avatar.jpg';
 }
