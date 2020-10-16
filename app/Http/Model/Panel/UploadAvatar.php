@@ -7,15 +7,15 @@ use Xo\Img\Image;
 
 class UploadAvatar
 {
-	static function Save()
+	static function SaveAvatar()
 	{
 		$arr = [
 			':uid' => $uid,
-			':ip' => $ip,
-			':info' => $info
+			':img' => $img,
+			':img1' => $img
 		];
 
-		$sql = 'INSERT INTO user_login(rf_user_id,ip,info) VALUES(:uid,:ip,:info)';
+		$sql = 'INSERT INTO user_avatar(rf_user_id,img_url) VALUES(:uid,:img) ON DUPLICATE KEY UPDATE img_url = :img1';
 
 		return Db::Query($sql,$arr)->LastInsertId();
 	}
