@@ -23,6 +23,7 @@ class AppConfig
 
 	// Domain host
 	const HOST = 'xo.xx';
+	const IMAGES_TYPES = ['image/jpeg', 'image/png', 'image/webp'];
 
 	// SmsApi
 	const SMSAPI_TOKEN = '';

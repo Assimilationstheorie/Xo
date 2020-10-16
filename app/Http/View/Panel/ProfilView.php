@@ -119,7 +119,7 @@ class ProfilView implements View
 		<div class="content">
 			<div class="box">
 				<h1 class="animate__animated animate__fadeIn"> Avatar </h1>
-				<p> Change avatar image. Max file size 2MB and extensions: jpg, png, gif, webp. </p>
+				<p> Change avatar image. Max file size 2MB and extensions: jpg, png, webp. </p>
 
 				<form class="panel-form"  method="post" enctype="multipart/form-data">
 					<h3>Change avatar</h3>
@@ -130,7 +130,8 @@ class ProfilView implements View
 					</div>
 
 					<label>Choose image</label>
-					<input type="file" name="file" placeholder="Enter current password">
+					<div id="btn-file-select" onclick="OpenFileInput()"> Select image file </div>
+					<input type="file" name="file" placeholder="Enter current password" onchange="GetFileName(this)" id="file">
 
 					<input type="submit" value="Save">
 				</form>

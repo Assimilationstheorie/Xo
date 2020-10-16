@@ -65,17 +65,19 @@ class Profil extends Controller
 			$user = Login::IsAuthenticated(['user', 'admin']);
 
 			$file = $_FILES['file']['tmp_name'];
+			$images = AppConfig::IMAGES_TYPES;
 			if(file_exists($file)) {
 				$type = $_FILES['file']['type'];
-				$images = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
 				if(in_array($type,$images)) {
 					$avatar = UploadAvatar::Upload((int) $user->id, (string) $file);
+				}else{
+					throw new Exception("Error Upload", 1);
 				}
 			}
 		}
 		catch(Exception $e)
 		{
-			// echo $e->getMessage();
+			echo $e->getMessage();
 			$err = '<div class="error-input animate__animated animate__flipInX"> Ups! Upload error. </div>';
 		}
 

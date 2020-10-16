@@ -178,7 +178,24 @@ form.panel-form input {
 	border-bottom: 1px solid #1a81f811;
 	border-radius: 6px;
 }
-
+#btn-file-select {
+	float: left;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-weight: 900;
+	color: #1a81f8;
+	border: 1px dashed #1a81f8;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all .6s;
+}
+#btn-file-select:hover {
+	background: #1a81f822;
+}
+#file {
+	visibility: hidden;
+}
 #footer {
 	float: left; width: 100%;
 	overflow: hidden;
