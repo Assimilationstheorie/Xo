@@ -23,4 +23,8 @@ class AppConfig
 
 	// Domain host
 	const HOST = 'xo.xx';
+
+	// SmsApi
+	const SMSAPI_TOKEN = '';
+	const SMSAPI_NOTIFIY_NUMBER = '';
 }

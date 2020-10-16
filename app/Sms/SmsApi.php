@@ -5,10 +5,19 @@ use Exception;
 
 class SmsApi
 {
+	function __construct(string $token)
+	{
+		$this->Token = $token;
+	}
+
 	/**
 	 * Send sms - SmsApi.pl
+	 *
+	 * use App\Sms\SmsApi;
+	 * $sms = new SmsApi(AppConfig::SMSAPI_TOKEN);
+	 * $res = $sms->Send(AppConfig::SMSAPI_NOTIFIY_NUMBER, 'New order: ', '', 'Info', true);
 	 */
-	function Send($to, $msg, $token, $msg_url = '', $info = 'Info', $backup = false)
+	function Send($to, $msg, $msg_url = '', $info = 'Info', $backup = false)
 	{
 		$url = '';
 		if(!empty($msg_url)) {
@@ -34,7 +43,7 @@ class SmsApi
 		curl_setopt($c, CURLOPT_POSTFIELDS, $params);
 		curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($c, CURLOPT_HTTPHEADER, array(
-			"Authorization: Bearer $token"
+			"Authorization: Bearer " . $this->Token
 		));
 
 		$this->Result = curl_exec($c);
