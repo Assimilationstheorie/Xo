@@ -1,6 +1,6 @@
 <?php
 // Redirect (delete line below)
-$router->Redirect('/','/demo');
+$router->Redirect('/index','/demo');
 // Default methods GET, POST, PUT
 $router->Set('/demo', 'App/Http/Controller/Demo', 'Index');
 // Only POST request

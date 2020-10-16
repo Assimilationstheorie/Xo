@@ -44,6 +44,7 @@ return '<!DOCTYPE html>
 
 	<link href="/style.css" rel="stylesheet">
 	<script defer src="/main.js" type="module"></script>
+	<script src="/func.js"></script>
 	'.$metatags.'
 </head>
 <body>
