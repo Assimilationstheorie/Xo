@@ -5,7 +5,7 @@ use App\Http\View\Menu\MenuPanel;
 
 class MenuTop
 {
-	static function Html(): string
+	static function Html($uid = 0): string
 	{
 		$m = new MenuPanel();
 		// Part
@@ -30,15 +30,15 @@ class MenuTop
 					<input type="text" placeholder="Search" class="search-input">
 				</div>
 				<div class="notify">
-					<a href="/"> <div class="notify-icon"> <i class="fas fa-bell"></i> <span id="notify-bell"> 23 </span> </div> </a>
-					<a href="/"> <div class="notify-icon"> <i class="fas fa-envelope"></i> <span id="notify-envelope" class="notify-hide"> 19 </span> </div> </a>
-					<a href="/"> <div class="notify-icon"> <i class="fas fa-comment"></i> <span id="notify-comment"> 69 </span> </div> </a>
+					<a href="/"> <div class="notify-icon"> <i class="fas fa-bell"></i> <span id="notify-bell" data-uid="'.$uid.'"> 23 </span> </div> </a>
+					<a href="/"> <div class="notify-icon"> <i class="fas fa-envelope"></i> <span id="notify-envelope" data-uid="'.$uid.'" class="notify-hide"> 19 </span> </div> </a>
+					<a href="/"> <div class="notify-icon"> <i class="fas fa-comment"></i> <span id="notify-comment" data-uid="'.$uid.'"> 69 </span> </div> </a>
 				</div>
 				<div class="cogs">
 					<i class="fas fa-cog"></i> <span> Settings </span>
 				</div>
 				<div class="avatar menu-top-show-popup">
-					<img src="/media/img/avatar.jpg">
+					<img src="/media/images/avatar/avatar-'.$uid.'.webp" onerror="ErrorAvatar(this)">
 
 					<div class="menu-top-popup animate__animated animate__slideInRight">
 						<a href="/panel/profil" class="popup-link"> <i class="fas fa-user"></i> Profil </a>

@@ -9,15 +9,35 @@ class ProfilView implements View
 {
 	static function Html(array $arr): string
 	{
+	}
+
+	static function HtmlInfo(array $arr): string
+	{
 		$h = Html::Header('Profil', 'Profil', '', '');
-		$h .= self::Show($arr['err']);
+		$h .= self::ShowInfo($arr['err'], $arr['uid']);
 		$h .= Html::Footer();
 		return $h;
 	}
 
-	static function Show($err)
+	static function HtmlAvatar(array $arr): string
 	{
-		return MenuTop::Html() . '
+		$h = Html::Header('Profil', 'Profil', '', '');
+		$h .= self::ShowAvatar($arr['err'], $arr['uid']);
+		$h .= Html::Footer();
+		return $h;
+	}
+
+	static function HtmlPassword(array $arr): string
+	{
+		$h = Html::Header('Profil', 'Profil', '', '');
+		$h .= self::ShowPassword($arr['err'], $arr['uid']);
+		$h .= Html::Footer();
+		return $h;
+	}
+
+	static function ShowInfo($err, $uid)
+	{
+		return MenuTop::Html($uid) . '
 		<div class="content">
 			<div class="box">
 				<h1 class="animate__animated animate__fadeIn"> Info </h1>
@@ -25,7 +45,7 @@ class ProfilView implements View
 
 				<form class="panel-form"  method="post">
 					<h3>Contact informations</h3>
-
+					'.$err.'
 					<label>Alias</label>
 					<input type="text" placeholder="Enter username">
 
@@ -49,7 +69,7 @@ class ProfilView implements View
 
 				<form class="panel-form"  method="post">
 					<h3>Address</h3>
-
+					'.$err.'
 					<label>Country</label>
 					<input type="text" placeholder="Enter country">
 
@@ -58,6 +78,59 @@ class ProfilView implements View
 
 					<label>Address</label>
 					<input type="text" placeholder="Enter address">
+
+					<input type="submit" value="Save">
+				</form>
+			</div>
+		</div>
+		';
+	}
+
+	static function ShowPassword($err, $uid)
+	{
+		return MenuTop::Html($uid) . '
+		<div class="content">
+			<div class="box">
+				<h1 class="animate__animated animate__fadeIn"> Password </h1>
+				<p> Change your password. </p>
+
+				<form class="panel-form"  method="post">
+					<h3>Change password</h3>
+					'.$err.'
+					<label>Current password</label>
+					<input type="password" name="pass1" placeholder="Enter current password">
+
+					<label>New password</label>
+					<input type="password" name="pass2" placeholder="Enter new password">
+
+					<label>Repeat new password</label>
+					<input type="password" name="pass3" placeholder="Repeat new password">
+
+					<input type="submit" value="Save">
+				</form>
+			</div>
+		</div>
+		';
+	}
+
+	static function ShowAvatar($err, $uid)
+	{
+		return MenuTop::Html($uid) . '
+		<div class="content">
+			<div class="box">
+				<h1 class="animate__animated animate__fadeIn"> Avatar </h1>
+				<p> Change avatar image. Max file size 2MB and extensions: jpg, png, gif, webp. </p>
+
+				<form class="panel-form"  method="post" enctype="multipart/form-data">
+					<h3>Change avatar</h3>
+					'.$err.'
+					<label>Avatar</label>
+					<div id="avatar-image">
+						<img src="/media/images/avatar/avatar-'.$uid.'.webp" id="avatar-src" onerror="ErrorAvatar(this)">
+					</div>
+
+					<label>Choose image</label>
+					<input type="file" name="file" placeholder="Enter current password">
 
 					<input type="submit" value="Save">
 				</form>

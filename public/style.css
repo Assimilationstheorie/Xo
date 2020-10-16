@@ -157,6 +157,26 @@ form.panel-form input {
 	width: auto;
 }
 
+#avatar-image {
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: 256px;
+	max-height: 256px;
+	background: #fafbfd;
+	border: 1px dashed #002855;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 6px;
+}
+#avatar-src{
+	float: left;
+	width: 100%;
+	height: 100%;
+	background: #fafbfd;
+	border-bottom: 1px solid #1a81f811;
+	border-radius: 6px;
+}
+
 #footer {
 	float: left; width: 100%;
 	overflow: hidden;

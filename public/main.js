@@ -69,3 +69,13 @@ function InView(ele = '.inview')
 		if(wt < wh) { i.classList.add(anim); }
 	})
 }
+
+function ErrorImage(it)
+{
+    it.src='/media/img/noimg.png';
+}
+
+function ErrorAvatar(it)
+{
+    it.src='/media/images/avatar/avatar.jpg';
+}

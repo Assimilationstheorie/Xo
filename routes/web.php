@@ -17,12 +17,12 @@ $router->Set('/logout', 'App/Http/Controller/Login', 'Logout');
 $router->Redirect('/panel','/panel/profil/info');
 $router->Redirect('/panel/profil','/panel/profil/info');
 
-$router->Set('/panel/profil/info', 'App/Http/Controller/Panel/Profil', 'Index');
-$router->Set('/panel/profil/avatar', 'App/Http/Controller/Panel/Profil', 'Index');
-$router->Set('/panel/profil/pass', 'App/Http/Controller/Panel/Profil', 'Index');
+$router->Set('/panel/profil/info', 'App/Http/Controller/Panel/Profil', 'Info');
+$router->Set('/panel/profil/avatar', 'App/Http/Controller/Panel/Profil', 'Avatar');
+$router->Set('/panel/profil/pass', 'App/Http/Controller/Panel/Profil', 'Password');
 
-$router->Set('/panel/orders/all', 'App/Http/Controller/Panel/Profil', 'Index');
-$router->Set('/panel/orders/add', 'App/Http/Controller/Panel/Profil', 'Index');
+$router->Set('/panel/orders/all', 'App/Http/Controller/Panel/Profil', 'Info');
+$router->Set('/panel/orders/add', 'App/Http/Controller/Panel/Profil', 'Info');
 
 // Client Panel Admin
 $router->Set('/panel/clients', 'App/Http/Controller/Panel/Clients.php', 'Index');

@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41549d1446336e26ea190af7fcefeda5",
+    "content-hash": "5a9b3d75e234b6e0e07aab7c6ab9df50",
     "packages": [
+        {
+            "name": "imagine/imagine",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/avalanche123/Imagine.git",
+                "reference": "cb2361e5bb4410b681462d8e4f912bc5dabf84ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/cb2361e5bb4410b681462d8e4f912bc5dabf84ab",
+                "reference": "cb2361e5bb4410b681462d8e4f912bc5dabf84ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.2.*",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.5 || ^8.4"
+            },
+            "suggest": {
+                "ext-gd": "to use the GD implementation",
+                "ext-gmagick": "to use the Gmagick implementation",
+                "ext-imagick": "to use the Imagick implementation"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "0.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Imagine\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com",
+                    "homepage": "http://avalanche123.com"
+                }
+            ],
+            "description": "Image processing for PHP 5.3",
+            "homepage": "http://imagine.readthedocs.org/",
+            "keywords": [
+                "drawing",
+                "graphics",
+                "image manipulation",
+                "image processing"
+            ],
+            "time": "2019-12-04T09:55:33+00:00"
+        },
         {
             "name": "moovfun/xo-db",
             "version": "v3.0",
@@ -42,7 +100,46 @@
                 }
             ],
             "description": "Php pdo mysql library.",
-            "time": "2020-09-06T09:05:04+00:00"
+            "time": "2020-09-06T15:07:04+00:00"
+        },
+        {
+            "name": "moovfun/xo-img",
+            "version": "v1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MoovFun/Xo-Img.git",
+                "reference": "f62eaaa7a7a5efbc848d3cb6b6b2c065e3c4af1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MoovFun/Xo-Img/zipball/f62eaaa7a7a5efbc848d3cb6b6b2c065e3c4af1b",
+                "reference": "f62eaaa7a7a5efbc848d3cb6b6b2c065e3c4af1b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-imagick": "*",
+                "imagine/imagine": ">=1.2.3",
+                "php": ">=7.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Xo\\Img\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MoovFun",
+                    "email": "moovspace@gmail.com"
+                }
+            ],
+            "description": "Resize, crop, show image in php.",
+            "time": "2020-08-25T13:29:38+00:00"
         },
         {
             "name": "moovfun/xo-mail",
@@ -117,8 +214,8 @@
                     "email": "moovspace@gmail.com"
                 }
             ],
-            "description": "Php router library.",
-            "time": "2020-08-24T13:03:30+00:00"
+            "description": "Php router class.",
+            "time": "2020-09-07T12:35:05+00:00"
         },
         {
             "name": "moovfun/xo-user",
@@ -159,25 +256,26 @@
                 "source": "https://github.com/MoovFun/Xo-User/tree/v3.0",
                 "issues": "https://github.com/MoovFun/Xo-User/issues"
             },
-            "time": "2020-09-06T14:00:19+00:00"
+            "time": "2020-09-08T08:56:19+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.1.7",
+            "version": "v6.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0"
+                "reference": "917ab212fa00dc6eacbb26e8bc387ebe40993bc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
-                "reference": "2c2370ba3df7034f9eb7b8f387c97b52b2ba5ad0",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/917ab212fa00dc6eacbb26e8bc387ebe40993bc1",
+                "reference": "917ab212fa00dc6eacbb26e8bc387ebe40993bc1",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
                 "ext-filter": "*",
+                "ext-hash": "*",
                 "php": ">=5.5.0"
             },
             "require-dev": {
@@ -221,7 +319,13 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2020-07-14T18:50:27+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/synchro",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-10-09T14:55:58+00:00"
         }
     ],
     "packages-dev": [],
@@ -233,5 +337,6 @@
     "platform": {
         "php": "^7.4"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
