@@ -100,17 +100,17 @@ input[type=submit] {
 	padding: 0px;
 	font-size: 25px;
 	font-weight: 700;
-	color: #1a81f8;
+	color: #002855;
 	font-family: 'Open Sans';
 }
 .box p {
 	float: left;
 	width: 96%;
-	margin: 0px 2%;
+	margin: 0px 2% 5px 2%;
 	padding: 0px;
 	font-size: 14px;
 	font-family: 'Open Sans';
-	color: #999;
+	color: #002855e3;
 }
 
 form.panel-form {
@@ -123,14 +123,31 @@ form.panel-form {
 	border: 1px solid #1a81f811;
 }
 form.panel-form h3 {
-	margin: 0px;
+	position: relative;
+	margin: 0px 0px 10px 0px;
+	padding-bottom: 5px;
 	color: #002855;
 	font-size: 15px;
 	text-transform: uppercase;
+	border-bottom: 1px solid #1a81f811;
 }
+form.panel-form h3::after{
+	display: block;
+	position: absolute;
+	bottom: -2px;
+	content: "";
+	width: 50px;
+	padding-bottom: 5px;
+	border-bottom: 3px solid #002855;
+}
+
 form.panel-form label {
 	color: #002855;
 	font-weight: 400
+}
+form.panel-form input {
+	font-size: 14px;
+	font-family: 'Open Sans';
 }
 
 .form-logo{

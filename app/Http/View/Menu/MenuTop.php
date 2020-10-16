@@ -39,7 +39,8 @@ class MenuTop
 				</div>
 				<div class="avatar menu-top-show-popup">
 					<img src="/media/img/avatar.jpg">
-					<div class="menu-top-popup">
+
+					<div class="menu-top-popup animate__animated animate__slideInRight">
 						<a href="/panel/profil" class="popup-link"> <i class="fas fa-user"></i> Profil </a>
 						<a href="/logout" class="popup-link"> <i class="fas fa-sign-out-alt"></i> Logout </a>
 					</div>

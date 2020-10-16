@@ -27,7 +27,7 @@ class ProfilView implements View
 					<h3>Contact informations</h3>
 
 					<label>Alias</label>
-					<input type="text" placeholder="Enter alias / username">
+					<input type="text" placeholder="Enter username">
 
 					<label>Name</label>
 					<input type="text" placeholder="Enter name">
@@ -44,7 +44,7 @@ class ProfilView implements View
 						<option>Female</option>
 					</select>
 
-					<input type="submit" value="Button">
+					<input type="submit" value="Save">
 				</form>
 
 				<form class="panel-form"  method="post">
@@ -57,9 +57,9 @@ class ProfilView implements View
 					<input type="text" placeholder="Enter city">
 
 					<label>Address</label>
-					<input type="password" placeholder="Enter address">
+					<input type="text" placeholder="Enter address">
 
-					<input type="submit" value="Button">
+					<input type="submit" value="Save">
 				</form>
 			</div>
 		</div>

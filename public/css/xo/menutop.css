@@ -5,7 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid #eceff2;
+	border: 1px solid #1a81f811;
 	font-size: 14px;
 }
 .menu-top * {
@@ -13,7 +13,7 @@
 }
 .menu-top .logo {
 	flex: 1 0 auto;
-	border-right: 1px solid #eceff2;
+	border-right: 1px solid #1a81f811;
 	height: 60px;
 }
 .menu-top .logo img {
@@ -24,7 +24,7 @@
 	width: 100%;
 	display: flex;
 	padding: 15px;
-	border-right: 1px solid #eceff2;
+	border-right: 1px solid #1a81f811;
 	height: 60px;
 	align-items: center;
 	justify-content: flex-start;
@@ -33,7 +33,7 @@
 	display: flex;
 	flex: 1 0 auto;
 	padding: 15px 5px;
-	border-right: 1px solid #eceff2;
+	border-right: 1px solid #1a81f811;
 	height: 60px;
 	align-items: center;
 	justify-content: flex-end;
@@ -41,10 +41,11 @@
 .menu-top .cogs {
 	display: flex;
 	flex: 1 0 auto;
-	border-right: 1px solid #eceff2;
+	border-right: 1px solid #1a81f811;
 	height: 60px;
 	align-items: center;
 	justify-content: center;
+	color: #002855;
 }
 .menu-top .avatar {
 	flex: 1 0 auto;
@@ -56,7 +57,7 @@
 	height: 50px;
 	padding: 3px;
 	border-radius: 50%;
-	border: 1px solid #eceff2;
+	border: 1px solid #1a81f811;
 }
 .search-input {
 	float: left;
@@ -76,8 +77,8 @@
 	max-width: 250px;
 	padding: 20px;
 	background: #fff;
-	border: 1px solid #eceff2;
-	box-shadow: 0px 1px 3px #eceff2;
+	border: 1px solid #1a81f811;
+	box-shadow: 0px 1px 3px #1a81f811;
 	overflow: hidden;
 	transition: all .6s;
 	z-index: 999;
@@ -85,7 +86,7 @@
 .menu-top-popup .popup-link {
 	float: left;
 	width: 100%;
-	color: #222;
+	color: #002855;
 }
 .menu-top-popup .popup-link:hover {
 	color: #1a81f8;
@@ -100,7 +101,7 @@
 	width: 100%;
 	overflow: hidden;
 	box-sizing: border-box;
-	border-bottom: 1px solid #eceff2;
+	border-bottom: 1px solid #1a81f811;
 }
 .menu-burger {
 	position: absolute;
@@ -111,7 +112,7 @@
 .menu-link {
 	float: left;
 	padding: 10px 20px;
-	color: #222;
+	color: #002855;
 }
 .menu-link:hover {
 	float: left;
@@ -126,19 +127,19 @@
 .submenu-bar {
 	float: left;
 	width: 100%;
-	padding: 10px 0px 0px 0px;
-	overflow: hidden;
+	padding: 10px 0 0 4%;
 	box-sizing: border-box;
-	border-bottom: 0px solid #eceff2;
+	border-bottom: 1px solid #1a81f811;
 	background: #fafbfd;
 }
 .submenu-link {
 	float: left;
 	padding: 10px 20px;
-	color: #1a82f8a6;
+	color: #002855;
 	font-size: 14px;
 	font-weight: 400;
-	border-bottom: 2px solid transparent;
+	border: 1px solid transparent;
+	margin-bottom: -2px;
 }
 .submenu-link:hover {
 	float: left;
@@ -147,8 +148,13 @@
 .submenu-link-active {
 	float: left;
 	font-weight: 6400;
-	color: #1a81f8;
-	border-bottom: 1px solid #1a81f8;
+	color: #002855;
+	background: #fff;
+	border-top: 1px solid #1a81f811;
+	border-left: 1px solid #1a81f811;
+	border-right: 1px solid #1a81f811;
+	border-radius: 3px;
+	box-shadow: 0px 0px 2px #1a81f811;
 }
 .submenu-link-active:hover {
 	color: #1a81f8;
@@ -164,8 +170,9 @@
 	width: 40px;
 	margin: 0px 5px;
 	cursor: pointer;
+	color: #002855;
 	background: #fafbfd;
-	border: 1px solid #eceff2;
+	border: 1px solid #1a81f811;
 	border-radius: 50%;
 	transition: all .6s;
 }
@@ -174,6 +181,7 @@
 	height: 100%;
 	padding-top: 8px;
 	text-align: center;
+	color: #002855;
 }
 .notify-icon span {
 	position: absolute;
