@@ -115,6 +115,29 @@ class User
 	}
 
 	/**
+	 * Update user password
+	 *
+	 * @param string $curr_pass Current password
+	 * @param string $pass1 New pass
+	 * @param string $pass2 New pass
+	 * @param integer $len Pass length min. 8
+	 * @return int True or false
+	 */
+	static function UpdatePassword(int $uid, $curr_pass, $pass1, $pass2, $len = 8)
+	{
+		if(!empty($curr_pass) && !empty($pass1) && $pass1 == $pass2 && strlen($pass1) >= $len)
+		{
+			$pass = md5($pass1);
+			$cpass = md5($curr_pass);
+			$user = Auth::GetWithId($uid);
+			if($user->pass == $cpass) {
+				return Auth::UpdateColumn('pass', $pass, $uid);
+			}
+		}
+		return 0;
+	}
+
+	/**
 	 * SendActivationEmail - Send email with password
 	 *
 	 * @param string $email Email address

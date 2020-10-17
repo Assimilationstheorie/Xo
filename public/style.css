@@ -184,14 +184,15 @@ form.panel-form input {
 	padding: 20px;
 	text-align: center;
 	font-weight: 900;
-	color: #1a81f8;
-	border: 1px dashed #1a81f8;
+	color: #002255;
+	border: 1px dashed #002255;
+	background: #00225511;
 	border-radius: 6px;
 	cursor: pointer;
 	transition: all .6s;
 }
 #btn-file-select:hover {
-	background: #1a81f822;
+	background: #00225522;
 }
 #file {
 	visibility: hidden;

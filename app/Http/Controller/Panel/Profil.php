@@ -2,9 +2,9 @@
 namespace App\Http\Controller\Panel;
 
 use Exception;
-use Xo\Db\Mysql\Db;
 use Xo\User\Auth;
 use Xo\User\Valid;
+use Xo\Db\Mysql\Db;
 
 use App\Config\AppConfig;
 use App\Http\Controller\Controller;
@@ -32,7 +32,7 @@ class Profil extends Controller
 			$err = '<div class="error-input animate__animated animate__flipInX"> Error. </div>';
 		}
 
-		return ProfilView::HtmlInfo(['err' => $err, 'uid' => $user->id]);
+		return ProfilView::HtmlInfo(['err' => $err, 'uid' => $user->id, 'user' => $user]);
 	}
 
 	function Password()
@@ -43,11 +43,20 @@ class Profil extends Controller
 		{
 			// Only users with role 'user' or 'admin'
 			$user = Login::IsAuthenticated(['user', 'admin']);
+
+			if(!empty($_POST)) {
+				$ok = User::UpdatePassword((int) $user->id, $_POST['pass1'], $_POST['pass2'], $_POST['pass3']);
+				if($ok > 0) {
+					$err = '<div class="ok animate__animated animate__flipInX"> Password has been updated. </div>';
+				} else {
+					$err = '<div class="error-input animate__animated animate__flipInX"> Enter new password. Password length min. 8 characters. </div>';
+				}
+			}
 		}
 		catch(Exception $e)
 		{
 			echo $e->getMessage();
-			$err = '<div class="error-input animate__animated animate__flipInX"> Error. </div>';
+			$err = '<div class="error-input animate__animated animate__flipInX"> Error update. </div>';
 		}
 
 		return ProfilView::HtmlPassword(['err' => $err, 'uid' => $user->id]);

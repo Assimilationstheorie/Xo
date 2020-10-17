@@ -14,7 +14,7 @@ class ProfilView implements View
 	static function HtmlInfo(array $arr): string
 	{
 		$h = Html::Header('Profil', 'Profil', '', '');
-		$h .= self::ShowInfo($arr['err'], $arr['uid']);
+		$h .= self::ShowInfo($arr['err'], $arr['user']);
 		$h .= Html::Footer();
 		return $h;
 	}
@@ -35,9 +35,9 @@ class ProfilView implements View
 		return $h;
 	}
 
-	static function ShowInfo($err, $uid)
+	static function ShowInfo($err, $user)
 	{
-		return MenuTop::Html($uid) . '
+		return MenuTop::Html($user->id) . '
 		<div class="content">
 			<div class="box">
 				<h1 class="animate__animated animate__fadeIn"> Info </h1>
@@ -46,20 +46,20 @@ class ProfilView implements View
 				<form class="panel-form"  method="post">
 					<h3>Contact informations</h3>
 					'.$err.'
+					<label>Email addres (disabled)</label>
+					<input type="text" placeholder="Enter email address" value="'.$user->email.'" disabled>
+
 					<label>Alias</label>
-					<input type="text" placeholder="Enter username">
+					<input type="text" name="username" placeholder="Enter username">
 
 					<label>Name</label>
-					<input type="text" placeholder="Enter name">
-
-					<label>Email addres</label>
-					<input type="text" placeholder="Enter email address">
+					<input type="text" name="name" placeholder="Enter name">
 
 					<label>Phone</label>
-					<input type="text" placeholder="Enter phone">
+					<input type="text" name="mobile" placeholder="Enter phone">
 
 					<label>Gender</label>
-					<select>
+					<select name="gender">
 						<option>Male</option>
 						<option>Female</option>
 					</select>
@@ -71,13 +71,13 @@ class ProfilView implements View
 					<h3>Address</h3>
 					'.$err.'
 					<label>Country</label>
-					<input type="text" placeholder="Enter country">
+					<input type="text" name="country" placeholder="Enter country">
 
 					<label>City</label>
-					<input type="text" placeholder="Enter city">
+					<input type="text" name="city" placeholder="Enter city">
 
 					<label>Address</label>
-					<input type="text" placeholder="Enter address">
+					<input type="text" name="address" placeholder="Enter address">
 
 					<input type="submit" value="Save">
 				</form>
@@ -92,7 +92,7 @@ class ProfilView implements View
 		<div class="content">
 			<div class="box">
 				<h1 class="animate__animated animate__fadeIn"> Password </h1>
-				<p> Change your password. </p>
+				<p> Change your password. Password length min. 8 characters. </p>
 
 				<form class="panel-form"  method="post">
 					<h3>Change password</h3>
@@ -130,7 +130,7 @@ class ProfilView implements View
 					</div>
 
 					<label>Choose image</label>
-					<div id="btn-file-select" onclick="OpenFileInput()"> Select image file </div>
+					<div id="btn-file-select" onclick="OpenFileInput()"> Select image: jpg, png or webp </div>
 					<input type="file" name="file" placeholder="Enter current password" onchange="GetFileName(this)" id="file">
 
 					<input type="submit" value="Save">
